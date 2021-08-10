@@ -1,0 +1,386 @@
+//下拉联级选择器
+.main-cascader-option{
+  .el-cascader-menu{
+   height: $main-cascaderOption-height-sm; 
+  }
+}
+// 下拉框
+.main-dropdown-menu {
+  @include margin($main-dropdown-margin-sm, '', $main-dropdown-margin-sm, '');
+
+  .el-dropdown-menu__item {
+    font-size: $main-size-sm !important;
+    line-height: $main-option-lineHeight-sm;
+    span {
+      font-size: $main-size-sm !important;
+
+    }
+  }
+}
+
+.el-select-dropdown {
+  .el-select-dropdown__item {
+    font-size: $main-size-sm !important;
+    line-height: $main-option-lineHeight-sm;
+  }
+}
+
+//radio组
+.main-radio-group {
+  .el-radio-button {
+    .el-radio-button__inner {
+      @include padding($main-primaryButton-paddingTop-sm, $main-primaryButton-paddingLeft-sm, $main-primaryButton-paddingTop-sm, $main-primaryButton-paddingLeft-sm);
+      font-size: $main-size-sm !important;
+
+    }
+
+  }
+}
+
+// 内容
+.main-container {
+  @include size(100%, calc(100% - #{$main-navigationBar-height-sm}));
+  padding: $main-container-padding-sm;
+
+  // overflow-x:hidden 
+}
+
+// 实际内容区
+.main-content {
+
+  min-width: $main-content-minWidth-sm;
+}
+
+
+
+// 包含导航条和分页内容区
+.main-navBarPagination-content {
+  @include size(100%, calc(100% - #{$main-naviBar-height-sm}));
+  @include padding(0, $main-content-paddingLeft-sm, $main-pagination-height-sm, $main-content-paddingLeft-sm);
+
+}
+
+// 正常导航条内容区
+.main-plainNavBar-content {
+  @include size(100%, calc(100% - #{$main-naviBar-height-sm}));
+}
+
+// 只有导航条的内容区
+.main-navBar-content {
+  @include size(100%, calc(100% - #{$main-naviBar-height-sm}));
+  @include padding(0, $main-content-paddingLeft-sm, 0, $main-content-paddingLeft-sm);
+}
+
+// 搜索栏
+.main-searchNav-content {
+  @include size(100%, calc(100% - #{$main-naviBar-height-sm}));
+  @include padding(0, 0, 0, 0);
+}
+
+
+// 表格内容区
+.main-plainTable-content {
+  @include padding($main-content-paddingTop-sm, 0, $main-content-paddingTop-sm, 0);
+}
+
+// 包含分页内容区
+.main-pagination-content {
+  @include padding(0, 0, $main-pagination-height-sm, 0);
+}
+
+// 底部是按钮
+.main-button-content {
+  @include padding(0, 0, $main-buttonBox-height-sm, 0);
+}
+
+// 正常内容区
+.main-plain-content {
+
+  @include padding(0, 0, 0, 0);
+}
+
+
+//card内容区
+.main-card-content {
+  @include padding(0, 0, 0, 0);
+}
+
+//正常card内容区
+.main-plainCard-content {
+  @include padding($main-content-paddingTop-sm, $main-content-paddingLeft-sm, $main-content-paddingTop-sm, $main-content-paddingLeft-sm);
+
+}
+
+//主要按钮
+.main-primaryCircle-button,
+.main-errorCircle-button {
+  @include padding($main-primaryCirleButton-padding-sm, $main-primaryCirleButton-padding-sm, $main-primaryCirleButton-padding-sm, $main-primaryCirleButton-padding-sm);
+  border-radius: 50% !important;
+
+  i,
+  span {
+    font-size: $main-size-sm;
+  }
+}
+
+
+//主要按钮
+.main-primary-button,
+.main-cancel-button {
+  @include padding($main-primaryButton-paddingTop-sm, $main-primaryButton-paddingLeft-sm, $main-primaryButton-paddingTop-sm, $main-primaryButton-paddingLeft-sm);
+  i,
+  span {
+    font-size: $main-size-sm;
+  }
+}
+
+//主要字体按钮
+.main-primaryIcon-button,
+.main-errorIcon-button,
+.main-warningIcon-button {
+  font-size: $main-imgButton-size-sm !important;
+  &.el-button {
+    i,
+    span {
+      font-size: $main-imgButton-size-sm !important;
+    }
+  }
+}
+
+// 主要图片字体按钮
+.main-primaryTableIcon-button {
+  @include size($main-imgButton-size-sm ,$main-imgButton-size-sm )
+}
+//普通按钮
+.main-plain-button {
+  @include padding($main-plainButton-paddingTop-sm, $main-plainButton-paddingLeft-sm, $main-plainButton-paddingTop-sm, $main-plainButton-paddingLeft-sm);
+
+  i,
+  span {
+    font-size: $main-plain-size-sm;
+
+
+  }
+}
+
+//包含图片的按钮
+.main-img-button {
+  img {
+    @include size($main-imgButton-size-sm, $main-imgButton-size-sm);
+  }
+}
+
+//字体按钮
+.main-primaryText-button,
+.main-plainText-button {
+  font-size: $main-size-sm !important;
+}
+ //table字体图标
+ .main-table-icon {
+   font-size: $main-imgButton-size-sm!important;
+ }
+//搜索按钮输入框
+.main-search-input {
+  @include size($main-searchInput-width-sm, $main-searchInput-height-sm);
+
+  .el-input__inner {
+    height: $main-searchInput-height-sm;
+    line-height: $main-searchInput-height-sm;
+    font-size: $main-size-sm;
+
+
+  }
+
+  .el-input__suffix {
+    right: $main-searchInputIcon-right-sm;
+
+    .el-input__suffix-inner {
+
+      i {
+        font-size: $main-searchInputIcon-size-sm;
+      }
+
+    }
+  }
+
+}
+
+
+
+// 分页
+.main-pagination {
+  @include size(100%, $main-pagination-height-sm);
+  position: relative;
+
+  .el-pagination {
+    position: absolute;
+    @include absolute(50%, 0, '', '');
+    transform: translateY(-50%);
+
+    i,
+    li,
+    span {
+      font-size: $main-size-sm !important;
+    }
+
+
+  }
+}
+
+// 下拉框
+.el-select-dropdown {
+  @include margin($main-dropdown-margin-sm, '', $main-dropdown-margin-sm, '');
+
+  .el-select-dropdown__item {
+    font-size: $main-size-sm;
+    line-height: $main-option-lineHeight-sm;
+  }
+}
+
+// 图标label
+.main-icon-label {
+  i {
+    font-size: $main-iconLabel-size-sm;
+    margin-right: $main-iconLabel-margin-sm;
+  }
+
+  span {
+    font-size: $main-title-size-sm;
+    &.main-icon-label-back {
+      font-size: $main-iconLabel-size-sm;
+      margin-right: $main-iconLabel-margin-sm;
+    }
+  }
+}
+// 状态label
+.main-status-label{
+  i {
+    @include size($main-size-sm,$main-size-sm);
+  }
+  font-size:$main-size-sm;
+}
+// 空页面
+.main-empty {
+  .main-empty-box {
+    .main-empty-error {
+      font-size: $main-empty-label-size-sm;
+      color: $main-empty-label-color-bluetheme;
+      // ma
+      margin-bottom: $main-empty-img-margin-sm;
+    }
+    .main-empty-img {
+      @include size($main-empty-img-width-sm, $main-empty-img-height-sm);
+      margin-bottom: $main-empty-img-margin-sm;
+    }
+  }
+}
+
+// 卡片
+.main-card {
+  border-radius: $main-border-radius-sm;
+  @include padding($main-card-paddimgTop-sm, $main-card-paddimgLeft-sm, $main-card-paddimgTop-sm, $main-card-paddimgLeft-sm);
+  margin-bottom: $main-card-marginBottom-sm;
+
+  // &:last-child {
+  //   // margin-bottom: 0;
+  // }
+
+  .main-card-title {
+    height: $main-card-title-height-sm;
+    line-height: $main-card-title-height-sm;
+  }
+
+  .main-card-content {
+  .main-card-info {
+      height: $main-card-title-height-sm;
+      line-height: $main-card-title-height-sm;
+
+      span {
+        font-size: $main-size-sm;
+      }
+    }
+
+    .el-form-item {
+      margin-bottom: 0;
+
+      .el-form-item__label,
+      span,
+      .el-form-item__content {
+
+        font-size: $main-size-sm;
+        line-height: $main-card-title-height-sm;
+      }
+    }
+  }
+
+}
+
+// 间隔
+.main-buttonSpace {
+  margin-left: $main-buttonSpace-marign-sm !important;
+}
+
+// 基本间隔
+.main-space {
+  margin-left: $main-space-marign-sm !important;
+}
+
+// 按钮盒子区
+.main-buttonBox {
+  height: $main-buttonBox-height-sm;
+  line-height: $main-buttonBox-height-sm;
+  @include padding(0, $main-content-padding-sm, 0, $main-content-padding-sm);
+
+  .el-button {
+    @include size($main-buttonBox-button-width-sm, $main-buttonBox-button-height-sm);
+
+    i,
+    span {
+      font-size: $main-buttonBox-button-size-sm;
+    }
+  }
+}
+
+// 列表
+.main-tarilList {
+  // overflow: auto;
+
+  .main-tarilList-item {
+    padding: $main-tarilListItem-padding-sm;
+
+
+    &::after {
+      @include size($maintarilListItemCricle-sm, $maintarilListItemCricle-sm);
+    }
+
+    &>div {
+      margin-bottom: $main-tarilListItem-marginBottom-sm;
+    }
+
+    .main-tarilListItem-name {
+
+      i,
+      span {
+        font-size: $main-title-size-sm;
+      }
+    }
+
+    i,
+    span {
+      font-size: $main-size-sm;
+    }
+  }
+}
+.main-switch{
+  .el-switch__core {
+    height: calc(#{$main-switch-width-sm}/ 2) !important;
+    line-height:calc(#{$main-switch-width-sm}/2) !important;
+    width: $main-switch-width-sm!important;
+  }
+  .el-switch__label{
+    font-size:$main-size-sm;
+    span{
+      font-size:$main-size-sm;
+    }
+  }
+}

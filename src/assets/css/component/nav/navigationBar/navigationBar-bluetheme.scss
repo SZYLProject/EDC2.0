@@ -1,0 +1,22 @@
+$navigationBar-bgColor-bluetheme:#0076F6;
+$navigationBar-logoTitle-color-bluetheme:#ffffff;
+$navigationBar-logoImg-bgColor-bluetheme:#006add;
+$navigationBar-operateContent-color-bluetheme:#ffffff;
+.navigationBar {
+  background-color: $navigationBar-bgColor-bluetheme;
+  .navigationBar-logo {
+    .navigationBar-logo-title {
+      color: $navigationBar-logoTitle-color-bluetheme;
+    }
+    .navigationBar-logo-img {
+      background-color: $navigationBar-logoImg-bgColor-bluetheme;
+    }
+  }
+  .navigationBar-operate{
+    .navigationBar-operate-content{
+     span,i{
+      color:$navigationBar-operateContent-color-bluetheme
+     }
+    }
+  }
+}

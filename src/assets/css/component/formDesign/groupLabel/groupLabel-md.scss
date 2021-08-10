@@ -1,0 +1,49 @@
+$groupLabel-list-height-md:300px;
+$groupLabel-item-name-padding-md:20px;
+.groupLabel{
+  position: relative;
+
+  .groupLabel-add{
+    position: absolute;
+    right:-$main-size-md*2;
+    top:50%;
+    font-size:$main-size-md;
+    transform: translateY(-50%);
+  }
+}
+.groupLabel-popover{
+
+  .groupLabel-list{
+    height: $groupLabel-list-height-md;
+    .groupLabel-item{
+      line-height: $main-option-height-md;
+      @include flex('','',space-between);
+      font-size: $main-size-md;
+      color:$main-color-bluetheme;
+      &.active{
+        color:$main-active-color-bluetheme;
+       
+      }
+      display: flex;
+    }
+    .groupLabel-item-name{
+      cursor: pointer;
+      position: relative;
+      span{
+        font-weight: $main-fontWeight-bold;
+        padding-left: $groupLabel-item-name-padding-md;
+      }
+      i{
+        position: absolute;
+        color:$formIcon-color-bluetheme
+      }
+    }
+    .groupLabel-item-operate{
+      @include flex('','',space-between);
+      .el-popover__reference-wrapper{
+        height: 100%;
+        @include flex('','center',"");
+      }
+    }
+  }
+}

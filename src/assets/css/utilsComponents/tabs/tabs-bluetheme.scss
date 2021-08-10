@@ -1,0 +1,22 @@
+
+
+$main-activeTabsItem-bgColor-bluetheme:#eaeff5;
+.main-tabs{
+  border-color:$main-border-color-bluetheme!important;
+  .main-tabs-header{
+
+    background-color: $main-title-bgColor-bluetheme;
+    .main-tabs-item{
+      color:$main-title-color-bluetheme;
+
+      &:hover,&.active{
+        color:$main-active-color-bluetheme;
+      }
+       &.active{
+        color:$main-active-color-bluetheme;
+        border-color: $main-active-color-bluetheme!important;
+        background-color: $main-activeTabsItem-bgColor-bluetheme;
+      }
+    }
+  }
+}

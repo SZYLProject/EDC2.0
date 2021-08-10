@@ -1,0 +1,56 @@
+$visitList-contentTitle-height-sm:40px;
+$visitList-groupItem-height-sm:40px;
+$visitList-content-width-sm:210px;
+$visitList-content-marginRight-sm:15px;
+$visitList-contentTitle-paddingLeft-sm:8px;
+$visitList-contentTitle-paddingRight-sm:14px;
+$visitList-contentInfo-paddingTop-sm:8px;
+$visitList-groupItem-paddingTop-sm:0;
+$visitList-groupItem-paddingLeft-sm:4px;
+$visitList-contentTitleLabel-width-sm:95px;
+$visitList-dropdown-apdding-sm:6px;
+.visitList-box {
+  .visitList-draggable {
+    .visitList-content {
+      @include size($visitList-content-width-sm, 100%);
+      margin-right:$visitList-content-marginRight-sm;
+      border-radius: $main-border-radius-sm;
+      .visitList-content-title{
+        @include padding(0,$visitList-contentTitle-paddingRight-sm,0,$visitList-contentTitle-paddingLeft-sm);
+        height: $visitList-contentTitle-height-sm;
+        line-height: $visitList-contentTitle-height-sm;
+        &>div{
+          &:first-child{
+            width: $visitList-contentTitleLabel-width-sm
+          }
+        }
+      }
+      .visitList-content-info{
+        @include size(100%, calc(100% - #{$visitList-contentTitle-height-sm * 2}));
+        @include padding($visitList-contentInfo-paddingTop-sm,$visitList-contentTitle-paddingRight-sm,$visitList-contentInfo-paddingTop-sm,$visitList-contentTitle-paddingRight-sm);
+        .visitList-group{
+          .visitList-groupItem{
+            @include padding($visitList-groupItem-paddingTop-sm,$visitList-groupItem-paddingLeft-sm,$visitList-groupItem-paddingTop-sm,$visitList-groupItem-paddingLeft-sm);
+            height: $visitList-groupItem-height-sm;
+            line-height: $visitList-groupItem-height-sm;
+            .visitList-groupItem-label{
+              i,span{
+                font-size:$main-size-sm ;
+              }        
+            }
+          }
+        }
+      }
+      .visitList-content-operate{
+        height:$visitList-contentTitle-height-sm;
+      }
+    }
+  }
+  .visitList-operate{
+    padding: 0 $main-content-paddingLeft-sm;
+
+  }
+}
+.visitList-dropdown{
+  padding: $visitList-dropdown-apdding-sm!important;
+}

@@ -1,0 +1,24 @@
+$main-drawerBody-padding-md:15px;
+$main-drawerBody-height-md:50px;
+.main-drawer {
+  .el-drawer__body{
+    @include size();
+    box-sizing: border-box;
+    padding: $main-drawerBody-padding-md;
+  }
+  .main-drawer-header{
+    line-height: $main-drawerBody-height-md;
+    .main-drawer-title{
+      font-size:$main-title-size-md;
+      color:$main-title-color-bluetheme;
+      font-weight: $main-fontWeight-bold;
+      font-family: $main-title-fontFamily;
+    }
+   }
+  .main-drawer-body {
+    @include size(100%,calc(100% - #{$main-drawerBody-height-md}));
+    box-sizing: border-box;
+    padding: $main-drawerBody-padding-md;
+  }
+
+}

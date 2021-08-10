@@ -1,0 +1,15 @@
+
+$systemLogDetialInfo-height-md:32px;
+.systemLogDetial{
+  .systemLogDetial-info{
+    height: $systemLogDetialInfo-height-md;
+    line-height: $systemLogDetialInfo-height-md;
+    span{
+      font-size: $main-size-md;
+      font-family: $main-fontFamily;
+      &:first-child{
+        font-weight: $main-fontWeight-bold;
+      }
+    }
+  }
+}

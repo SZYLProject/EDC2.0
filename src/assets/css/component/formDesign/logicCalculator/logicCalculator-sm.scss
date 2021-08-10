@@ -1,0 +1,62 @@
+$logicCalculator-box-padding-sm:10px;
+$logicCalculator-box-height-sm:180px;
+$logicCalculator-box-margin-sm:20px;
+$logicCalculator-boxItem-height-sm:32px;
+$logicCalculator-boxItem-border-radius-sm:15px;
+
+$logicCalculator-boxItem-margin-sm:10px;
+$logicCalculator-boxItem-height-sm:32px;
+$logicCalculator-boxItem-padding-sm:12px;
+
+$logicCalculator-elementItem-height-sm:38px;
+$logicCalculator-elementItem-marginBotton-sm:20px;
+$logicCalculator-elementItem-marginLeft-sm:2%;
+$logicCalculator-elementItem-width-sm:5%;
+
+$logicCalculator-ruleContainer-height-sm:80px;
+$logicCalculator-ruleContainer-padding-sm:8px;
+.logicCalculator{
+  .logicCalculator-title{
+    font-size: $main-size-sm;
+    margin-bottom: $logicCalculator-box-margin-sm;
+  }
+  .logicCalculator-box{
+    padding: $logicCalculator-box-padding-sm;
+    max-height: $logicCalculator-box-height-sm;
+    border-radius: $main-border-radius-sm;
+
+    .logicCalculator-box-item {
+
+      height: $logicCalculator-boxItem-height-sm;
+      border-radius: $logicCalculator-boxItem-border-radius-sm;
+      line-height: $logicCalculator-boxItem-height-sm;
+      margin-right: $logicCalculator-boxItem-margin-sm;
+      margin-bottom: $logicCalculator-boxItem-margin-sm;
+      padding: 0 $logicCalculator-boxItem-padding-sm;
+      font-size: $main-size-sm;
+    }
+    margin-bottom: $logicCalculator-box-margin-sm;
+  }
+  .logicCalculator-element{
+
+ 
+    .logicCalculator-element-item{
+      span{
+        width: $logicCalculator-elementItem-width-sm;
+        height: $logicCalculator-elementItem-height-sm;
+        margin-left: $logicCalculator-elementItem-marginLeft-sm;
+        margin-bottom: $logicCalculator-elementItem-marginBotton-sm;
+        border-radius:$main-border-radius-sm;
+        font-size: $main-size-sm;
+        line-height: $logicCalculator-elementItem-height-sm;
+      }
+    }
+  }
+  .logicCalculator-rule-container{
+      width: 100%;
+      height: $logicCalculator-ruleContainer-height-sm;
+      border-radius: $main-border-radius-sm;
+      padding: $logicCalculator-ruleContainer-padding-sm;
+      margin-bottom: $logicCalculator-box-margin-sm;
+  }
+}

@@ -1,0 +1,36 @@
+$main-tooltip-bgColor-bluetheme:#f5f7fa;
+$main-tooltip-color-bluetheme:#666666;
+$main-tooltip-paddingLeft-md:4px;
+$main-tooltip-paddingTop-md:6px;
+$main-tooltipInfo-width-md:14px;
+$main-tooltipInfo-size-md:12px;
+$main-tooltipInfo-marginLeft-md:4px;
+$main-tooltipInfo-bgColor-bluetheme:#ccc;
+$main-tooltipInfo-color-bluetheme:#ffffff;
+.main-tooltip {
+  &.el-tooltip__popper {
+    // background: $main-tooltip-bgColor-bluetheme!important;
+    color: $main-tooltip-color-bluetheme!important;
+    border:1px solid $main-border-color-bluetheme!important;
+    border-radius: $main-border-radius-md;
+    padding: $main-tooltip-paddingTop-md $main-tooltip-paddingLeft-md!important;
+  }
+  .popper__arrow{
+    border-bottom-color:$main-border-color-bluetheme!important;
+    border-top-color:$main-border-color-bluetheme!important;
+  }
+
+}
+.main-tooltip-info{
+  display: inline-block;
+  width: $main-tooltipInfo-width-md;
+  height: $main-tooltipInfo-width-md;
+  line-height: $main-tooltipInfo-width-md;
+  text-align: center;
+  font-size: $main-tooltipInfo-size-md;
+  border-radius: 50%;
+  background: $main-tooltipInfo-bgColor-bluetheme;
+  color: $main-tooltipInfo-color-bluetheme;
+  margin-left: $main-tooltipInfo-marginLeft-md;
+  vertical-align: middle;
+}

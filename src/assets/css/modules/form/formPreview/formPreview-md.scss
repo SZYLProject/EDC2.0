@@ -1,0 +1,20 @@
+$formPreview-content-width-md:800px;
+$formPreview-title-height-md:60px;
+$formPreview-title-size-md:24px;
+.formPreview{
+  .main-table-content{
+    @include flex('','',center)
+  }
+  .formPreview-content{
+   width: $formPreview-content-width-md;
+   .formPreview-title{
+     line-height: $formPreview-title-height-md;
+     text-align: center;
+     font-size: $formPreview-title-size-md;
+     font-weight: $main-fontWeight-bold;
+   }
+   .designFormLabel{
+     padding: 0!important;
+   }
+  }
+}

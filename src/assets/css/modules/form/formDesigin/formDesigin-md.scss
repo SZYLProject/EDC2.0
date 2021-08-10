@@ -1,0 +1,26 @@
+$formDesigin-left-width-md:440px;
+$formDesigin-right-width-md:700px;
+$formDesigin-box-margin-md:50px;
+$formDesigin-left-padding-md:10px;
+.formDesigin{
+ @include flex('','',space-between);
+  box-sizing: border-box;
+  padding-top: $main-content-paddingTop-md !important;
+  padding-bottom: $main-content-paddingTop-md !important;
+  .formDesigin-left{
+     @include size($formDesigin-left-width-md,100%);
+     border:1px solid;
+     border-radius: $main-border-radius-md;
+     box-sizing: border-box;
+     padding: $formDesigin-left-padding-md;
+     .main-tabs-body{
+      padding:$formDesigin-left-padding-md 0 0 0;
+    }
+  }
+  .formDesigin-center{
+   @include size(calc(100% - #{$formDesigin-left-width-md + $formDesigin-box-margin-md*2 + $formDesigin-right-width-md}),100%)   
+  }
+  .formDesigin-right{
+    @include size($formDesigin-right-width-md,100%)
+  }
+}

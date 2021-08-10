@@ -1,0 +1,15 @@
+$main-editor-toolbar-height-sm:28px;
+
+.main-editor {
+  .w-e-toolbar {
+    height: $main-editor-toolbar-height-sm;
+    .w-e-menu{
+      height: $main-editor-toolbar-height-sm;
+      line-height:$main-editor-toolbar-height-sm;
+      font-size:$main-size-sm;
+    }
+  }
+  .w-e-text-container {
+    height: calc(100% - #{$main-editor-toolbar-height-sm})!important;
+  }
+}

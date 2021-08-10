@@ -1,0 +1,42 @@
+
+.research {
+  .research-content {
+    &>div {
+      border-color: $main-border-color-bluetheme!important;
+      .research-content-word {
+       
+        span {
+          color: $main-color-bluetheme;
+        }
+      }
+      .research-content-title {
+        background-color: $main-title-bgColor-bluetheme;
+      }
+      .research-content-operate{
+        .research-environment{
+          .el-button{
+          
+            &:first-child{
+              i,span{
+                color:$main-test-color-bluetheme;
+              } 
+            }
+            &:last-child{
+              i,span{
+                color:$main-proud-color-bluetheme;  
+              } 
+            }
+          }
+        }    
+        .research-operate{
+          .el-button{
+            background-color:$main-iconButton-bgColor-bluethem;
+            i{
+              color:$main-primaryIcon-color-bluetheme;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+
+.home{
+  &>div{
+    &:nth-child(odd){
+      border-color: $main-border-color-bluetheme!important;
+    }
+    .home-title{
+       color:$main-title-color-bluetheme;
+    }
+    &:nth-child(-n+2){
+      border-color: $main-border-color-bluetheme!important;
+    }
+    .main-table{
+      thead{
+        th{
+          color:$main-active-color-bluetheme
+        }
+      }
+    }
+  }
+}

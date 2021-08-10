@@ -1,0 +1,51 @@
+$versionListFormItem-height-md:32px;
+$versionListForm-radio-width-md:40px;
+.versionListForm{
+  .versionListForm-content{
+    // overflow: auto;
+    .el-radio-group{
+      width: 100%;
+    }
+    .el-radio {
+      width: 100%;
+      box-sizing: border-box;
+      margin:  0!important;
+      display: flex;
+      .el-radio__input{
+        vertical-align: middle;
+        line-height: $versionListFormItem-height-md;
+        height: $versionListFormItem-height-md;
+        
+      }
+      .el-radio__label{
+        display: inline-block;
+        width: calc(100% - #{$versionListForm-radio-width-md});
+      }
+      &.is-checked{
+        .versionListForm-content-info{
+          span{
+            font-weight: $main-fontWeight-bold!important;
+          }
+        }       
+      }
+      
+   }
+    .versionListForm-content-info{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      line-height: $versionListFormItem-height-md;
+      overflow: hidden;
+      // display: inline-block;
+      vertical-align: middle;
+      span{
+        font-size: $main-size-md;
+        font-family: $main-fontFamily;
+        font-weight: $main-fontWeight;
+        vertical-align: middle;
+        display:inline-block ;
+        width: 32%;
+      }
+    }
+  }
+}

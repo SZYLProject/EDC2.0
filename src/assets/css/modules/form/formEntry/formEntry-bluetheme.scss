@@ -1,0 +1,36 @@
+.formEntry {
+  .formEntry-content {
+
+    .formEntry-left {
+      border-color: $main-border-color-bluetheme!important;
+    }
+
+    .formEntry-right {
+      .formEntry-formHeader {
+        background-color: $main-title-bgColor-bluetheme;
+      }
+
+      .formEntry-form {
+
+        border-color: $main-border-color-bluetheme!important;
+
+
+        .formEntry-formTitle {
+
+          background-color: $main-title-bgColor-bluetheme;
+
+
+          .formEntry-formTitle-title {
+            color: $main-active-color-bluetheme;
+
+          }
+
+
+
+        }
+
+
+      }
+    }
+  }
+}

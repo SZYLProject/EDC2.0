@@ -1,0 +1,16 @@
+$formTable-table-marginBottom-md:10px;
+$formTable-note-height-md:30px;
+.formTable{
+  padding-bottom:$formTable-table-marginBottom-md;
+  .el-table{
+    margin-bottom: $formTable-table-marginBottom-md;
+  }
+  .formTable-operate{
+   
+    text-align: right;
+
+  }
+  .formTable-note{
+    line-height: $formTable-note-height-md;
+  }
+}

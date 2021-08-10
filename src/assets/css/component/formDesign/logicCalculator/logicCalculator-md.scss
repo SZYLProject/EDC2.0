@@ -1,0 +1,78 @@
+$logicCalculator-box-padding-md:10px;
+$logicCalculator-box-height-md:180px;
+$logicCalculator-box-margin-md:20px;
+$logicCalculator-boxItem-height-md:32px;
+$logicCalculator-boxItem-border-radius-md:15px;
+
+$logicCalculator-boxItem-margin-md:10px;
+$logicCalculator-boxItem-height-md:32px;
+$logicCalculator-boxItem-padding-md:12px;
+
+$logicCalculator-elementItem-height-md:38px;
+$logicCalculator-elementItem-marginBotton-md:20px;
+$logicCalculator-elementItem-marginLeft-md:2%;
+$logicCalculator-elementItem-width-md:5%;
+
+$logicCalculator-ruleContainer-height-md:80px;
+$logicCalculator-ruleContainer-padding-md:8px;
+.logicCalculator{
+  .logicCalculator-title{
+    font-size: $main-size-md;
+    font-weight:$main-fontWeight-bold;
+    margin-bottom: $logicCalculator-box-margin-md;
+  }
+  .logicCalculator-box{
+    padding: $logicCalculator-box-padding-md;
+    max-height: $logicCalculator-box-height-md;
+    min-height: $logicCalculator-boxItem-height-md + $logicCalculator-boxItem-margin-md;
+    border: 1px solid ;
+    border-radius: $main-border-radius-md;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    .logicCalculator-box-item {
+      display: inline-block;
+      height: $logicCalculator-boxItem-height-md;
+      border-radius: $logicCalculator-boxItem-border-radius-md;
+      line-height: $logicCalculator-boxItem-height-md;
+      text-align: center;
+      margin-right: $logicCalculator-boxItem-margin-md;
+      margin-bottom: $logicCalculator-boxItem-margin-md;
+      cursor: pointer;
+      padding: 0 $logicCalculator-boxItem-padding-md;
+      font-size: $main-size-md;
+    }
+    margin-bottom: $logicCalculator-box-margin-md;
+  }
+  .logicCalculator-element{
+
+ 
+    .logicCalculator-element-item{
+      display: flex;
+      height: auto;
+      flex-wrap: wrap;
+      align-content: space-around;
+      span{
+        width: $logicCalculator-elementItem-width-md;
+        height: $logicCalculator-elementItem-height-md;
+        margin-left: $logicCalculator-elementItem-marginLeft-md;
+        margin-bottom: $logicCalculator-elementItem-marginBotton-md;
+        border-radius:$main-border-radius-md;
+        font-size: $main-size-md;
+        font-weight:$main-fontWeight;
+        line-height: $logicCalculator-elementItem-height-md;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+  .logicCalculator-rule-container{
+      width: 100%;
+      height: $logicCalculator-ruleContainer-height-md;
+      overflow: auto;
+      border: 1px solid ;
+      border-radius: $main-border-radius-md;
+      padding: $logicCalculator-ruleContainer-padding-md;
+      margin-bottom: $logicCalculator-box-margin-md;
+  }
+}

@@ -1,0 +1,22 @@
+$designFormLabel-operate-width-sm:110px;
+$designFormLabel-paddingLeft-sm:10px;
+.designFormLabel {
+  padding: 0 $designFormLabel-paddingLeft-sm;
+  .designFormLabel-content{
+
+    .designFormLabel-operate {
+      width: $designFormLabel-operate-width-sm;
+
+    }
+    // &>.el-form-item{
+    //   width: calc(100% - #{$designFormLabel-operate-width-sm});
+    // }
+
+  }
+  .designFormLabel-note{
+    margin-bottom: calc(#{$main-form-margin-sm} /2);
+    span{
+      font-size:$main-size-sm;
+    }
+  }
+}

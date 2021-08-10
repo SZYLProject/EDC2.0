@@ -1,0 +1,48 @@
+$main-tableActiveTr-bgColor-bluetheme:rgba(95,175,255,0.05);
+$main-tableHoverTr-bgColor-bluetheme:#EFF7FF;
+.main-table,.main-form-table {
+  thead {
+    th {
+      color: $main-title-color-bluetheme;
+      background-color:$main-title-bgColor-bluetheme;
+    }
+  }
+  &.main-form-table{
+    .el-table, td,
+    th , .el-table__empty-tex{
+      border-color: $main-border-color-bluetheme!important;
+    }
+    thead {
+      th {
+        background-color:$main-content-bgColor-bluetheme;
+      }
+    }
+  }
+  tr{
+    &:hover{
+      td{
+        background-color: $main-tableHoverTr-bgColor-bluetheme!important;
+      }    
+    }
+  }
+  .hover-row{
+    td{
+      background-color:$main-tableHoverTr-bgColor-bluetheme!important;
+    } 
+  }
+  td {
+    color: $main-color-bluetheme;
+  }
+  .el-table__empty-text{
+    color:$main-title-color-bluetheme;
+  }
+  tbody{
+    tr{
+      &:nth-child(even){
+        td{
+          background-color: $main-tableActiveTr-bgColor-bluetheme;
+        }      
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+$formEntryLeft-width-md:320px;
+$formEntryLeft-padding-md:10px;
+$formEntryLeft-serach-height-md:40px;
+$formEntry-formHeader-height-md:120px;
+$formEntry-formHeader-margin-md:20px;
+$formEntry-formTitle-height-md:48px;
+$formEntry-form-padding-md:20px;
+$formEntry-searchForm-label-width-md:100px;
+$formEntry-formHeader-minWidth-md:1380px;
+$formEntry-contentItem-margin-md:15px;
+.formEntry {
+
+  .formEntry-content {
+    @include flex('', '', space-between);
+    &>div {
+      box-sizing: border-box
+    }
+
+    .formEntry-left {
+      @include size($formEntryLeft-width-md, 100%);
+      border: 1px solid ;
+      border-radius: $main-border-radius-md;
+      padding: $formEntryLeft-padding-md;
+
+      .formEntry-left-serach {
+        .el-form-item__content {
+          line-height: $main-formInput-height-md !important;
+          height: $main-formInput-height-md !important;
+        }
+      }
+
+      .formEntry-left-tree {
+        height: calc(100% - #{$main-formInput-height-md + $main-form-margin-md});
+        overflow: auto;
+      }
+    }
+
+    .formEntry-right {
+      @include size(calc(99% - #{$formEntryLeft-width-md}), 100%);
+      overflow-x: auto;
+
+      .formEntry-formHeader {
+        height: $formEntry-formHeader-height-md;
+      
+        margin-bottom: $formEntry-formHeader-margin-md;
+        min-width: $formEntry-formHeader-minWidth-md;
+      }
+
+      .formEntry-form {
+        min-width: $formEntry-formHeader-minWidth-md;
+        @include size(100%, calc(100% - #{$formEntry-formHeader-height-md + $formEntry-formHeader-margin-md}));
+        border: 1px solid $main-border-color-bluetheme;
+        border-radius: $main-border-radius-md;
+        box-sizing: border-box;
+        padding-bottom: $main-buttonBox-height-md;
+
+        .formEntry-formTitle {
+          height: $formEntry-formTitle-height-md;
+
+          line-height: $formEntry-formTitle-height-md;
+          padding: 0 $formEntry-form-padding-md;
+          margin-bottom: $formEntry-formHeader-margin-md;
+          @include flex('', '', space-between);
+
+          .formEntry-formTitle-title {
+    
+            font-size: $main-title-size-md;
+            font-weight: $main-fontWeight-bold;
+          }
+
+          .main-searchForm {
+            height: $formEntry-formTitle-height-md;
+            line-height: $formEntry-formTitle-height-md;
+
+            .main-searchForm-label {
+              width: $formEntry-searchForm-label-width-md;
+            }
+          }
+
+        }
+
+        .formEntry-content {
+          padding: 0 $formEntry-form-padding-md;
+          height: calc(100% - #{$formEntry-formTitle-height-md + $formEntry-formHeader-margin-md});
+          overflow: auto;
+
+       
+
+          .el-form {
+            width: 100%;
+
+            .el-form-item__content {
+              line-height: normal !important;
+              height: auto !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .formEntry-content-item {
+    margin-bottom: $formEntry-contentItem-margin-md;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

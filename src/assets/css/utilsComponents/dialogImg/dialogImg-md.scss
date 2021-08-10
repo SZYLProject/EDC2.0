@@ -1,0 +1,20 @@
+
+$main-dialogImg-body-padding-md:20px;
+$main-dialogImg-buttonbox-height-md:50px;
+$main-dialogImg-height-md:600px;
+$main-dialogImg-width-md:500px;
+.main-dialogImg{
+  width: $main-dialogImg-width-md;
+  .el-dialog__body{
+    height: $main-dialogImg-height-md;
+    box-sizing: border-box;
+    @include padding(0, $main-dialogImg-body-padding-md, 0, $main-dialogImg-body-padding-md);
+    .main-dialogImg-content{
+      height: calc(100% - #{$main-dialogImg-buttonbox-height-md})
+    }
+    .main-dialog-footer{
+      @include size(100%,$main-dialogImg-buttonbox-height-md);
+      line-height:$main-dialogImg-buttonbox-height-md!important;
+    }
+  }
+}

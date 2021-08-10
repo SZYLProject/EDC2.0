@@ -1,0 +1,25 @@
+$groupLabel-list-height-sm:240px;
+$groupLabel-item-name-padding-sm:20px;
+.groupLabel{
+  .groupLabel-add{
+    right:-$main-size-sm*2;
+    font-size:$main-size-sm;
+    transform: translateY(-50%);
+  }
+}
+.groupLabel-popover{
+
+  .groupLabel-list{
+    height: $groupLabel-list-height-sm;
+    .groupLabel-item{
+      line-height: $main-option-height-sm;
+      font-size: $main-size-sm;
+    }
+    .groupLabel-item-name{
+      span{
+        padding-left: $groupLabel-item-name-padding-sm;
+      }
+  
+    }
+  }
+}

@@ -1,0 +1,33 @@
+$floatMenuBox-padding-md:4px;
+$floatMenu-item-width-md:100px;
+$floatMenu-item-height-md:36px;
+$floatMenu-item-padding-md:8px;
+.zIndexTop {
+  z-index: 1000;
+}
+.floatMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  .floatMenuBox {
+    position: absolute;
+    z-index: 1000;
+    cursor: pointer;
+    padding: $floatMenuBox-padding-md;
+    pointer-events: auto;
+    border: 1px solid;
+    border-radius: $main-border-radius-md;
+    .floatMenu-item {
+      width: $floatMenu-item-width-md;
+      line-height: $floatMenu-item-height-md;
+      font-size: $main-size-md;
+      // text-align: center;
+      box-sizing: border-box;
+      padding-left: $floatMenu-item-padding-md;
+    }
+  }
+}

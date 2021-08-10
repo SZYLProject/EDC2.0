@@ -1,0 +1,79 @@
+$visitList-contentTitle-height-md:48px;
+$visitList-groupItem-height-md:40px;
+$visitList-content-width-md:260px;
+$visitList-content-marginRight-md:21px;
+$visitList-contentTitle-paddingLeft-md:11px;
+$visitList-contentTitle-paddingRight-md:16px;
+$visitList-contentInfo-paddingTop-md:10px;
+$visitList-groupItem-paddingTop-md:0;
+$visitList-groupItem-paddingLeft-md:6px;
+$visitList-contentTitleLabel-width-md:120px;
+$visitList-dropdown-apdding-md:10px;
+.visitList-box {
+  @include size(100%, 100%);
+  display: flex;
+  .visitList-draggable {
+    display: flex;
+    @include size('', 100%);
+    .visitList-content {
+      @include size($visitList-content-width-md, 100%);
+      margin-right:$visitList-content-marginRight-md;
+      box-sizing: border-box;
+      border: 1px solid;
+      cursor: pointer;
+      border-radius: $main-border-radius-md;
+      &>div{
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .visitList-content-title{
+        @include padding(0,$visitList-contentTitle-paddingRight-md,0,$visitList-contentTitle-paddingLeft-md);
+        height: $visitList-contentTitle-height-md;
+        line-height: $visitList-contentTitle-height-md;
+        &>div{
+          &:first-child{
+            width: $visitList-contentTitleLabel-width-md
+          }
+        }
+      }
+      .visitList-content-info{
+        @include size(100%, calc(100% - #{$visitList-contentTitle-height-md * 2}));
+        box-sizing: border-box;
+        @include padding($visitList-contentInfo-paddingTop-md,$visitList-contentTitle-paddingRight-md,$visitList-contentInfo-paddingTop-md,$visitList-contentTitle-paddingRight-md);
+        overflow: auto;
+        .visitList-group{
+          @include size(100%, 100%);
+          .visitList-groupItem{
+            @include flex('','',space-between);
+            box-sizing: border-box;
+            @include padding($visitList-groupItem-paddingTop-md,$visitList-groupItem-paddingLeft-md,$visitList-groupItem-paddingTop-md,$visitList-groupItem-paddingLeft-md);
+            height: $visitList-groupItem-height-md;
+            line-height: $visitList-groupItem-height-md;
+            cursor: pointer;
+            .visitList-groupItem-label{
+              i,span{
+                font-size:$main-size-md ;
+                font-family: $main-fontFamily;
+                font-weight: $main-fontWeight; 
+              }        
+            }
+          }
+        }
+      }
+      .visitList-content-operate{
+        height:$visitList-contentTitle-height-md;
+        // line-height:$visitList-contentTitle-height-md;
+        text-align: center;
+      }
+    }
+  }
+  .visitList-operate{
+    // display: flex;
+    @include flex(column,'',center);
+    padding: 0 $main-content-paddingLeft-md;
+
+  }
+}
+.visitList-dropdown{
+  padding: $visitList-dropdown-apdding-md!important;
+}

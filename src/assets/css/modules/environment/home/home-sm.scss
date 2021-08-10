@@ -1,0 +1,23 @@
+$home-title-height-sm:40px;
+$home-oddBox-width-sm:60%;
+.home{
+  &>div{
+    &:nth-child(odd){
+      width: $home-oddBox-width-sm;
+    }
+    &:nth-child(even){
+      width: calc(100% - #{$home-oddBox-width-sm});
+    }
+    &:last-child{
+      padding-left: $main-content-paddingLeft-sm;
+    }
+    .home-title{
+       line-height: $home-title-height-sm;
+       @include size(100%,$home-title-height-sm);
+       font-size: $main-title-size-sm;
+    }
+    .home-content{
+      @include size(100%,calc(100% - #{$home-title-height-sm}));
+    }
+  }
+}

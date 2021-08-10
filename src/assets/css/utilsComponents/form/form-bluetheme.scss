@@ -1,0 +1,70 @@
+.main-form,.main-searchForm,.main-designform,.main-drageForm {
+  .el-form-item.is-required:not(.is-no-asterisk) .el-form-item__label-wrap>.el-form-item__label:before,
+  .el-form-item.is-required:not(.is-no-asterisk)>.el-form-item__label:before {
+    color: $main-error-color-bluetheme;
+  }
+  .main-error-form{
+    color: $main-error-color-bluetheme;
+  }
+  .main-searchForm-label,.el-textarea__inner,.main-form-split,
+  .el-form-item__label,
+  .el-input__inner,
+  .el-input__icon,
+  .el-input__prefix,
+  .el-radio__label,
+  .main-form-text{
+    color:$main-color-bluetheme
+  }
+
+  .el-date-editor{
+    .el-input__icon{
+      color:$main-formInput-icon-color-bluetheme
+    }
+  }
+  .el-input-group__append{
+    background-color: transparent;
+  }
+  .el-input__suffix{
+    .el-icon-circle-close{
+      color:$main-formInput-icon-color-bluetheme
+    }
+  }
+ 
+}
+.main-drageForm{
+  .el-form-item__label{
+    color:$main-active-color-bluetheme
+  }
+}
+.main-file-input{
+  input{
+    background-color: $main-form-bgColor-bluetheme!important;
+  }
+  .el-input__prefix{
+    i{
+      color:$formIcon-color-bluetheme!important;
+    }
+    
+  }
+}
+.main-fileUpload{
+  .el-upload-list__item{
+    &:hover{
+      background-color: transparent!important;
+    }
+  }
+  .el-upload-list__item-name{
+    i{
+      color:$formIcon-color-bluetheme!important;
+    }   
+  }
+  .el-upload-list__item-status-label{
+    .el-icon-upload-success{
+      color:$main-succsessIcon-color-bluetheme!important;
+    }
+
+  }
+  .el-icon-close{
+    color:$main-errorIcon-color-bluetheme!important;
+  }
+}

@@ -1,0 +1,18 @@
+$main-drawerBody-padding-sm:10px;
+$main-drawerBody-height-sm:40px;
+.main-drawer {
+  .el-drawer__body{
+    padding: $main-drawerBody-padding-sm;
+  }
+  .main-drawer-header{
+    line-height: $main-drawerBody-height-sm;
+    .main-drawer-title{
+      font-size:$main-title-size-sm;
+    }
+   }
+  .main-drawer-body {
+    @include size(100%,calc(100% - #{$main-drawerBody-height-sm}));
+    padding: $main-drawerBody-padding-sm;
+  }
+
+}

@@ -1,0 +1,68 @@
+
+$drageFormModel-search-margin-md:10px;
+$drageFormModel-listItem-height-md:40px;
+$drageFormModel-listItem-margin-md:10px;
+$drageFormModel-listItem-padding-md:20px;
+$drageFormModel-listItem-icon-margin-md:15px;
+$drageFormModel-tree-width-md:180px;
+.drageFormModel{
+  @include size();
+  .drageFormModel-content,.main-tabs{
+    @include size();
+  }
+  .drageFormModel-search{
+    margin-bottom: $drageFormModel-search-margin-md;
+    .main-search-input{
+      width: 100% !important;
+    }
+  }
+  .drageFormModel-tree-content{
+    @include size();
+    @include flex('', '', space-between);
+    .drageFormModel-tree{
+      width: $drageFormModel-tree-width-md;
+    }
+    .drageFormModel-list-content{
+      width:calc(98% - #{$drageFormModel-tree-width-md})
+    }
+  }
+  .drageFormModel-list-item{
+    line-height: $drageFormModel-listItem-height-md;
+    border:1px solid;
+    border-radius: $main-border-radius-md;
+    box-sizing: border-box;
+    margin-bottom: $drageFormModel-listItem-margin-md;
+    padding: 0 $drageFormModel-listItem-padding-md;
+    cursor: pointer;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    span{
+      i,span{
+        vertical-align: middle;
+      }
+      i{
+        font-size: $main-iconLabel-size-md;
+      }
+      &:first-child{
+        i{
+          margin-right: $drageFormModel-listItem-icon-margin-md;
+        }
+      }
+      span{
+        font-size: $main-size-md;
+      }
+      
+    }
+    .float-right{
+      i{
+        margin-right:  0 !important;
+      }
+    }
+  }
+  .drageFormModel-list{
+    @include size(100%, calc(100% - #{$main-searchInput-height-md + $drageFormModel-search-margin-md}));
+    overflow: auto;
+   
+  }
+}

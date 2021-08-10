@@ -1,0 +1,21 @@
+$main-tooltip-bgColor-bluetheme:#f5f7fa;
+$main-tooltip-color-bluetheme:#666666;
+$main-tooltip-paddingLeft-sm:4px;
+$main-tooltip-paddingTop-sm:6px;
+$main-tooltipInfo-width-sm:14px;
+$main-tooltipInfo-size-sm:12px;
+$main-tooltipInfo-marginLeft-sm:4px;
+.main-tooltip {
+  &.el-tooltip__popper {
+    border-radius: $main-border-radius-sm;
+    padding: $main-tooltip-paddingTop-sm $main-tooltip-paddingLeft-sm!important;
+  }
+
+}
+.main-tooltip-info{
+  width: $main-tooltipInfo-width-sm;
+  height: $main-tooltipInfo-width-sm;
+  line-height: $main-tooltipInfo-width-sm;
+  font-size: $main-tooltipInfo-size-sm;
+  margin-left: $main-tooltipInfo-marginLeft-sm;
+}

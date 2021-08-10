@@ -1,0 +1,37 @@
+$designFormLabel-operate-width-md:120px;
+$designFormLabel-paddingLeft-md:15px;
+.designFormLabel {
+  box-sizing: border-box;
+  padding: 0 $designFormLabel-paddingLeft-md;
+  .designFormLabel-content{
+    @include flex('', '', space-between);
+    .designFormLabel-operate {
+      width: $designFormLabel-operate-width-md;
+      @include flex('',center,center);
+    }
+ 
+    .el-form-item{
+      width: 100%;
+      .el-form-item__content{
+        line-height: normal!important;
+        height: auto !important;
+      }
+    }
+    // &>.el-form-item{
+    //   width: calc(100% - #{$designFormLabel-operate-width-md});
+    // }
+
+
+  }
+  .note-form{
+    .el-form-item{
+      width: 100%;
+    }
+  }
+  .designFormLabel-note{
+    margin-bottom:calc(#{$main-form-margin-md} /2);
+    span{
+      font-size:$main-size-md;
+    }
+  }
+}

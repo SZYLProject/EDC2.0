@@ -1,0 +1,11 @@
+
+$systemLogDetialInfo-height-sm:26px;
+.systemLogDetial{
+  .systemLogDetial-info{
+    height: $systemLogDetialInfo-height-sm;
+    line-height: $systemLogDetialInfo-height-sm;
+    span{
+      font-size: $main-size-sm;
+    }
+  }
+}

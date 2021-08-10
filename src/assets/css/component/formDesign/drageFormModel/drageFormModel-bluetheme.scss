@@ -1,0 +1,19 @@
+
+.drageFormModel{
+  .drageFormModel-list-item{
+    border-color:$main-border-color-bluetheme!important;
+    span{
+      i{
+        color:$main-active-color-bluetheme
+      }
+      span{
+        color:$main-color-bluetheme;
+      }
+    }
+    .float-right{
+      i{
+        color:$main-color-bluetheme;
+      }
+    }
+  }
+}

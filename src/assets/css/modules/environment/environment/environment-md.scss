@@ -1,0 +1,17 @@
+.environment{
+  .environment-search{
+    height: $main-naviBar-height-md;
+    line-height: $main-naviBar-height-md;
+
+  }
+  .testeeList-table-cell{
+    height: 100%;
+    div{
+      height: 100%;
+    }
+    span{
+      // display: inline-block;
+      height: 100%;
+    }
+  }
+}

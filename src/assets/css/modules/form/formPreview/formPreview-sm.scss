@@ -1,0 +1,12 @@
+$formPreview-content-width-sm:600px;
+$formPreview-title-height-sm:46px;
+$formPreview-title-size-sm:20px;
+.formPreview{
+  .formPreview-content{
+   width: $formPreview-content-width-sm;
+   .formPreview-title{
+     line-height: $formPreview-title-height-sm;
+     font-size: $formPreview-title-size-sm;
+   }
+  }
+}

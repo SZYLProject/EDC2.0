@@ -1,0 +1,73 @@
+$navBar-environment-width-sm:70px;
+$navBar-environment-height-sm:24px;
+$navBar-tab-padding-sm:15px;
+$navBar-morePopper-width-sm:370px;
+$navBar-morePopper-paddingLeft-sm:20px;
+$navBar-morePopper-paddingTop-sm:14px;
+$navBar-morePopper-paddingBottom-sm:0;
+$navBar-morePopperInfo-paddingTop-sm:12px;
+$navBar-morePopperInfoLi-height-sm:30px;
+$navBar-box-minWidth-sm:1050px;
+$navBar-tabsActiveLine-bottom-sm:3px;
+$navBar-tabsActiveLine-height-sm:2px;
+.navBar { 
+  @include padding(0, $main-content-padding-sm, 0, $main-content-padding-sm);
+  @include size(100%, $main-naviBar-height-sm);
+  line-height: $main-naviBar-height-sm;
+  .navBar-box{
+    min-width: $navBar-box-minWidth-sm;
+    @include size(100%, $main-naviBar-height-sm);
+  }
+  .navBar-environment,
+  .navBar-version {
+    span {
+      font-size: $main-size-sm;
+    }
+  }
+
+  .navBar-environment {
+    span {
+      @include size($navBar-environment-width-sm, $navBar-environment-height-sm);
+      line-height: $navBar-environment-height-sm;
+      border-radius: $main-border-radius-sm;
+    }
+  }
+
+  .el-tabs {
+    .el-tabs__active-bar{
+      bottom:$navBar-tabsActiveLine-bottom-md;
+      height: $navBar-tabsActiveLine-height-md;
+    }
+    .el-tabs__item {
+      font-size: $main-size-sm;
+      padding: 0 $navBar-tab-padding-sm;
+    }
+  }
+
+  .navBar-more {
+    font-size: $main-size-sm;
+    margin-left: $navBar-tab-padding-sm * 2;
+  }
+}
+
+.navBar-morePopper {
+  width: $navBar-morePopper-width-sm;
+  @include padding($navBar-morePopper-paddingTop-sm, $navBar-morePopper-paddingLeft-sm, $navBar-morePopper-paddingBottom-sm, $navBar-morePopper-paddingLeft-sm);
+  .navBar-morePopper-item {
+    .navBar-morePoppe-title {
+      font-size: $main-title-size-sm;
+      i {
+        font-size: $main-imgButton-size-sm;
+  
+      }
+    }
+    .navBar-morePoppe-info {
+      padding: $navBar-morePopperInfo-paddingTop-sm $main-imgButton-size-sm+$main-buttonSpace-marign-sm;
+      li {
+        font-size: $main-size-sm;
+        line-height: $navBar-morePopperInfoLi-height-sm;
+
+      }
+    }
+  }
+}

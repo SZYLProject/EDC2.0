@@ -1,0 +1,47 @@
+$queryForm-title-height-sm:36px;
+$queryForm-list-width-sm:160px;
+$queryForm-height-sm:380px;
+$queryForm-listItem-height-sm:36px;
+$queryForm-listItem-paddingleft-sm:16px;
+$queryForm-right-marginBottom-sm:8px;
+.queryForm {
+  height:$queryForm-height-sm;
+  .queryForm-left{
+    @include size($queryForm-list-width-sm,100%);
+    .queryForm-title {
+      height: $queryForm-title-height-sm;
+      line-height: $queryForm-title-height-sm;
+  
+      span{
+        font-size: $main-size-sm;
+      }
+    }
+    .queryForm-list{
+      @include size($queryForm-list-width-sm,calc(100% - #{$queryForm-title-height-sm}));
+      .queryForm-list-item{
+        height: $queryForm-listItem-height-sm;
+        line-height: $queryForm-listItem-height-sm;
+        padding-left: $queryForm-listItem-paddingleft-sm;
+        i{
+          font-size:$main-imgButton-size-sm;
+        }
+        span{
+         font-size: $main-size-sm;
+        }
+      }
+     }
+  }
+  .queryForm-right{
+    padding-top: $queryForm-title-height-sm;
+    width: calc(95% - #{$queryForm-list-width-sm});
+    .queryForm-form{
+      margin-bottom:$queryForm-right-marginBottom-sm;
+      .el-textarea__inner{
+        font-size: $main-size-sm;
+      }
+    }
+    .queryForm-operate{
+      margin-bottom: $queryForm-right-marginBottom-sm;
+    }
+  }
+}

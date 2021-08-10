@@ -1,0 +1,16 @@
+.main-popover-footer{
+  .main-popover-cancelButton{
+     color:$main-color-bluetheme!important;
+     border-color: $main-border-color-bluetheme!important;
+     &:hover{
+       background-color: transparent!important;
+     }
+  }
+  .main-popover-sureButton{
+    color:$main-plain-color-bluetheme!important;
+    background-color: $main-primaryButton-bgColor-bluetheme!important;
+    &:hover{
+      background-color: $main-primaryButton-bgColor-bluetheme!important;
+    }
+ }
+}

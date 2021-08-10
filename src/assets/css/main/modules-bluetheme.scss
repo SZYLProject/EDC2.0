@@ -1,0 +1,347 @@
+.main-dropdown-menu {
+  .el-dropdown-menu__item {
+    color: $main-option-color-bluetheme !important;
+
+    span {
+      color: $main-option-color-bluetheme !important;
+    }
+
+    &:hover {
+      color: $main-option-activeColor-bluetheme !important;
+      background-color: $main-option-activeBgColor-bluetheme !important;
+
+      span {
+        color: $main-option-activeColor-bluetheme !important;
+      }
+    }
+
+    &:focus {
+      background-color: $main-option-activeBgColor-bluetheme !important;
+      color: $main-option-color-bluetheme !important;
+
+      span {
+        color: $main-option-color-bluetheme !important;
+      }
+    }
+  }
+}
+//radio组
+.main-radio-group{
+  .el-radio-button{
+    &.is-active{
+      .el-radio-button__inner{
+        background-color: $main-active-color-bluetheme
+      }
+    }
+
+  }
+}
+// 选项高亮颜色
+.el-radio,.el-checkbox{
+  &.is-checked{
+    span{
+      color:$main-active-color-bluetheme!important
+    } 
+    .el-radio__inner,.el-checkbox__inner{
+      background-color: $main-active-color-bluetheme!important;
+      border-color:  $main-active-color-bluetheme!important;
+    }  
+  }
+}
+
+.main-container {
+  background-color: $main-container-bgColor-bluetheme;
+}
+
+.main-content {
+  background-color: $main-content-bgColor-bluetheme;
+}
+
+//主要按钮
+.main-primary-button,.main-cancel-button{
+  background-color: $main-primaryButton-bgColor-bluetheme!important;
+  i,
+  span {
+    color:$main-primaryButton-color-bluetheme!important;
+  }
+  &.main-cancel-button{
+    color:$main-color-bluetheme!important;
+    border-color: $main-border-color-bluetheme!important;
+    background-color: $main-cancelButton-bgColor-bluetheme!important;
+    i,
+    span {
+      color:$main-color-bluetheme!important;
+    }
+  }
+  &.is-disabled,&.el-button.is-disabled{
+    i,span {
+      color:$main-primaryButton-color-bluetheme!important;
+    }
+  }
+}
+
+//主要按钮
+.main-primaryCircle-button,.main-errorCircle-button{
+  background-color: $main-primaryButton-bgColor-bluetheme!important;
+  i,
+  span {
+    color:$main-primaryButton-color-bluetheme!important;
+  }
+  &.main-errorCircle-button{
+    background-color:$main-errorButton-bgColor-bluetheme!important;
+    color:$main-errorIcon-color-bluetheme!important;
+    i,
+    span {
+      color:$main-errorIcon-color-bluetheme!important;
+    }
+    &.is-disabled,&.el-button.is-disabled{
+      i,span {
+        color:$main-errorIcon-color-bluetheme!important;
+      }
+      color:$main-errorIcon-color-bluetheme!important;
+    }
+  }
+  &.is-disabled,&.el-button.is-disabled{
+    i,span {
+      color:$main-primaryButton-color-bluetheme!important;
+    }
+  }
+}
+.main-plain-button {
+  background-color: $main-plainButton-bgColor-bluetheme !important;
+  border-color: $main-plain-borderColor-bluetheme !important;
+
+  i,
+  span {
+    color: $main-color-bluetheme
+  }
+}
+//主要字体按钮
+.main-primaryIcon-button,.main-errorIcon-button,.main-warningIcon-button{
+  color:$main-primaryIcon-color-bluetheme;
+  &.el-button{
+    background: transparent!important;
+    color:$main-primaryIcon-color-bluetheme;
+    i,span{
+      color:$main-primaryIcon-color-bluetheme;
+    }
+    &:hover{
+      color:$main-primaryIcon-color-bluetheme;
+    }
+  }
+  &.main-errorIcon-button{
+    color:$main-errorIcon-color-bluetheme;
+    // font-weight: $main-fontWeight;
+    &.el-button{
+      i,span{
+        color:$main-errorIcon-color-bluetheme;
+      }
+    }
+  }
+  &.main-warningIcon-button{
+    color:$main-warningIcon-color-bluetheme;
+    &.el-button{
+      i,span{
+        color:$main-warningIcon-color-bluetheme;
+      }
+    }
+  }
+  
+}
+//普通按钮
+.main-plain-button {
+  i,
+  span {
+    color: $main-plainButton-color-bluetheme;
+  }
+}
+//字体按钮
+.main-primaryText-button,.main-plainText-button{
+  color:$main-primaryIcon-color-bluetheme!important;
+  &.main-plainText-button{
+    color:$main-plainIcon-color-bluetheme!important;
+  }
+}
+.main-search-input {
+  .el-input__inner {
+    color: $main-color-bluetheme;
+  }
+
+  .el-input__suffix {
+    .el-input__suffix-inner {
+      i {
+        color: $main-searchInputIcon-color-bluetheme;
+      }
+
+    }
+  }
+
+}
+// 错误盒子
+.main-errorBox {
+  background-color: $main-content-bgColor-bluetheme;
+
+}
+// 空页面
+.main-empty {
+  .main-empty-box {
+    .main-empty-error {
+      color: $main-empty-label-color-bluetheme;
+    }
+    .main-empty-img {
+      @include background();
+    }
+  }
+}
+// 图标label
+.main-icon-label{
+  i{
+    color:$main-iconLabel-color-bluetheme;
+  }
+  span{
+    color: $main-title-color-bluetheme;
+
+  }
+}
+.main-status-label{
+  color: $main-title-color-bluetheme;
+}
+// 禁止
+.main-disable,.el-button.is-disabled {
+  color: $main-disable-color-bluetheme !important;
+  span,i{
+    color: $main-disable-color-bluetheme !important;
+  }
+  .el-dropdown-menu__item {
+    color: $main-disable-color-bluetheme !important;
+    span {
+      color: $main-disable-color-bluetheme !important;
+    }
+    &:hover {
+      color: $main-disable-color-bluetheme !important;
+      span {
+        color: $main-disable-color-bluetheme !important;
+      }
+    }
+    &:focus {
+      color: $main-disable-color-bluetheme !important;
+
+      span {
+        color: $main-disable-color-bluetheme !important;
+      }
+    }
+  }
+}
+
+// 分页
+.main-pagination {
+  .el-pagination {
+
+    i,
+    li,
+    span {
+      color: $main-color-bluetheme !important;
+    }
+
+    li.active {
+      color: $main-active-color-bluetheme !important;
+    }
+  }
+}
+
+// 下拉框
+.el-select-dropdown {
+  .el-select-dropdown__item {
+    color: $main-option-color-bluetheme !important;
+
+    &.selected {
+      color: $main-option-activeColor-bluetheme !important;
+    }
+
+    &:hover {
+      color: $main-option-activeColor-bluetheme !important;
+      // font-weight: $main-fontWeight-bold;
+      background-color: $main-option-activeBgColor-bluetheme !important;
+    }
+  }
+}
+
+// 卡片
+.main-card {
+  border-color: $main-border-color-bluetheme !important;
+  // .main-card-title{
+  //   // background-color: $main-title-bgColor-bluetheme;
+  // }
+  .main-card-content {
+    .main-card-info {
+      .main-card-info-title {
+        color: $main-plain-title-color-bluetheme;
+      }
+
+      .main-card-info-content {
+        color: $main-color-bluetheme
+      }
+    }
+
+    .el-form-item {
+
+      .el-form-item__label,
+      span,
+      .el-form-item__content {
+        color: $main-plain-title-color-bluetheme;
+      }
+
+      .el-input__inner {
+        color: $main-color-bluetheme
+      }
+
+    }
+  }
+
+}
+input::-webkit-input-placeholder{
+  color:$main-placeholder-color-bluetheme !important;
+}
+ input:-moz-placeholder{
+  color:$main-placeholder-color-bluetheme!important;
+}
+ input::-moz-placeholder{
+  color:$main-placeholder-color-bluetheme!important;
+}
+input:-ms-input-placeholder{
+  color:$main-placeholder-color-bluetheme!important;
+}
+// 列表
+.main-tarilList{
+  .main-tarilList-item{
+    border-color: $main-tarilListItem-bod-borderColor-bluetheme!important;
+    &::after{
+      background-color: $main-tarilListItem-bod-borderColor-bluetheme;
+    }
+    i,span{
+      color:$main-color-bluetheme;
+     }
+  }
+}
+// #nprogress .bar {
+//   // background: $main-plain-borderColor-bluetheme !important; //自定义颜色
+// }
+
+// 切换开关
+.main-switch{
+  &.is-checked{
+    span{
+      background-color: transparent!important;
+      border-color:  $main-active-color-bluetheme!important;
+    } 
+    .el-switch__core:after{
+      background-color: $main-active-color-bluetheme!important;
+    }
+  }
+  .el-switch__label{
+    color:$main-color-bluetheme!important;
+    &.is-active{
+      color:$main-active-color-bluetheme!important;
+    }
+  }
+}

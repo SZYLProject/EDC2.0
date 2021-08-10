@@ -1,0 +1,30 @@
+$main-editor-toolbar-height-md:33px;
+
+.main-editor {
+  @include size();
+  .toolbar-container{
+    @include size();
+  }
+  .w-e-toolbar,.w-e-text-container{
+    border: none !important;
+    border-top:1px solid!important;
+  }
+  .w-e-toolbar {
+    height: $main-editor-toolbar-height-md;
+    padding: 0!important;
+    .w-e-menu{
+      height: $main-editor-toolbar-height-md;
+      line-height:$main-editor-toolbar-height-md;
+      font-size:$main-size-md;
+    }
+  }
+  .w-e-text-container {
+    height: calc(100% - #{$main-editor-toolbar-height-md})!important;
+    b{
+      font-weight: $main-fontWeight-bold!important;
+    }
+    i{
+      font-style: italic!important;
+    }
+  }
+}

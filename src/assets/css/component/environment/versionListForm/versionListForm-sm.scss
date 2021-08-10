@@ -1,0 +1,22 @@
+$versionListFormItem-height-sm:32px;
+$versionListForm-radio-width-sm:40px;
+.versionListForm{
+  .versionListForm-content{
+    .el-radio {
+      .el-radio__input{
+        line-height: $versionListFormItem-height-sm;
+        height: $versionListFormItem-height-sm;
+        
+      }
+      .el-radio__label{
+        width: calc(100% - #{$versionListForm-radio-width-sm});
+      }    
+   }
+    .versionListForm-content-info{
+      line-height: $versionListFormItem-height-sm;
+      span{
+        font-size: $main-size-sm;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+$formDesigin-left-width-sm:320px;
+$formDesigin-right-width-sm:500px;
+$formDesigin-box-margin-sm:30px;
+$formDesigin-left-padding-sm:8px;
+.formDesigin{
+  padding-top: $main-content-paddingTop-sm !important;
+  padding-bottom: $main-content-paddingTop-sm !important;
+  .formDesigin-left{
+     @include size($formDesigin-left-width-sm,100%);
+     border-radius: $main-border-radius-sm;
+     padding: $formDesigin-left-padding-sm;
+     .main-tabs-body{
+      padding:$formDesigin-left-padding-sm 0 0 0;
+    }
+  }
+  .formDesigin-center{
+   @include size(calc(100% - #{$formDesigin-left-width-sm + $formDesigin-box-margin-sm*2 + $formDesigin-right-width-sm}),100%)   
+  }
+  .formDesigin-right{
+    @include size($formDesigin-right-width-sm,100%)
+  }
+}

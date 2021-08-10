@@ -1,0 +1,62 @@
+$drageToArea-item-padding-md:20px;
+$drageToArea-item-margin-md:20px;
+$drageToArea-itemOperate-md:32px;
+$drageToArea-button-padding-md:8px;
+$drageToArea-emptyItem-size-md:20px;
+$drageToArea-list-minWdith-md:300px;
+.drageToArea {
+  position: relative;
+  @include size();
+  // .drageToArea-list{
+  //   overflow: auto;
+  // }
+  .drageToArea-list{
+    @include size();
+    min-width:$drageToArea-list-minWdith-md;
+  }
+  .main-drageForm{
+    @include size();
+  }
+  .drageToArea-item {
+    padding: $drageToArea-item-padding-md;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: $main-border-radius-md;
+    position: relative;
+    @include flex('', '', space-around);
+
+    .drageToArea-item-activeIcon {
+      position: absolute;
+      right: -1px;
+      top: -1px;
+    }
+
+    .drageToArea-item-form {
+      width: calc(95% - #{$drageToArea-itemOperate-md});
+    }
+
+    margin-bottom: $drageToArea-item-margin-md;
+
+    .drageToArea-item-operate {
+      width: $drageToArea-itemOperate-md;
+      position: relative;
+
+      .main-errorCircle-button {
+        border: none!important;
+        padding: $drageToArea-button-padding-md !important
+      }
+
+      &>span {
+        @include center();
+      }
+    }
+  }
+
+  .drageToArea-empty-item {
+    text-align: center;
+    @include center();
+    font-size:$drageToArea-emptyItem-size-md;
+    font-weight: $main-fontWeight-bold;
+  }
+}

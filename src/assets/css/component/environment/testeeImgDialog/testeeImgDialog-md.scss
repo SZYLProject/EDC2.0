@@ -1,0 +1,162 @@
+$testeeImgDialog-header-height-md:54px;
+$testeeImgDialog-body-padding-md:20px;
+$testeeImgDialogForm-contentbox-padding-md:15px;
+$testeeImgDialogForm-buttonbox-height-md:50px;
+$testeeImgDialogTablelist-margin-md:10px;
+$testeeImgDialogTablelist-item-padding-md:10px;
+$testeeImgDialogTablelist-itemInfo-height-md:48px;
+$testeeImgDialog-content-minWidth-md:1450px;
+.testeeImgDialog-box {
+  .el-dialog__wrapper {
+    overflow: initial
+  }
+  .editImgDialogForm{
+    .main-form{
+      height:280px;
+    }
+    .el-dialog__body{
+      padding-bottom: 0 !important;
+    }
+    .main-dialog-footer{
+      @include size(100%,$testeeImgDialogForm-buttonbox-height-md);
+      line-height:$testeeImgDialogForm-buttonbox-height-md!important;
+    }
+  }
+}
+
+.testeeImgDialog {
+  margin-top: calc(#{$main-naviBar-height-md} + #{$main-container-padding-md}) !important;
+  @include size(calc(100% - #{$main-container-padding-md} * 2), calc(100% - #{$main-container-padding-md} * 2 - #{$main-naviBar-height-md}));
+
+  .el-dialog__header {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: $testeeImgDialog-header-height-md;
+    line-height: $testeeImgDialog-header-height-md;
+    @include flex('', '', space-between);
+
+    .main-dialog-title {
+      line-height: inherit !important;
+      height: auto !important;
+    }
+  }
+
+  .el-dialog__body {
+    @include size(100%, calc(100% - #{$testeeImgDialog-header-height-md}));
+    box-sizing: border-box;
+    @include padding(0, $testeeImgDialog-body-padding-md, $testeeImgDialog-body-padding-md, $testeeImgDialog-body-padding-md);
+
+  }
+  .testeeImgDialog-contianor{
+    @include size();
+    overflow-x: auto
+  }
+  .testeeImgDialog-content  {
+    @include size();
+    @include flex('', '', space-between);
+    box-sizing: border-box;
+    min-width: $testeeImgDialog-content-minWidth-md;
+    &>div {
+      @include size(calc(100% / 2 - #{$testeeImgDialog-body-padding-md} / 2), 100%);
+      box-sizing: border-box;
+      border-radius: $main-border-radius-md;
+      border: 1px solid;
+    }
+
+    .testeeImgDialog-upload {
+      .testeeImgDialog-upload-content {
+        height:calc(100% - #{$testeeImgDialogForm-buttonbox-height-md});
+
+        .testeeImgDialog-contentbox {
+          padding-bottom: 0;
+        }
+      }
+
+      .testeeImgDialog-upload-operate {
+        height: $testeeImgDialogForm-buttonbox-height-md !important;
+        line-height: $testeeImgDialogForm-buttonbox-height-md !important;
+        text-align: center
+      }
+    }
+
+    .testeeImgDialog-tablelist {
+      .testeeImgDialog-tablelist-content {
+        height:calc(100% - #{$testeeImgDialogForm-buttonbox-height-md});
+        box-sizing: border-box;
+        padding-bottom: $testeeImgDialogTablelist-margin-md;
+        .testeeImgDialog-contentbox {
+          padding-top: 0;
+          padding-bottom: 0;
+          @include flex('', '', space-between);
+          flex-wrap: wrap;
+          &:after {
+            content: ' ';
+            @include size(calc((100% - #{$testeeImgDialogTablelist-margin-md}*2)/3), calc((100% - #{$testeeImgDialogTablelist-margin-md}*2)/2));
+          }
+          .testeeImgDialog-tablelist-item {
+            @include size(calc((100% - #{$testeeImgDialogTablelist-margin-md}*2)/3), calc((100% - #{$testeeImgDialogTablelist-margin-md}*1)/2));
+            box-sizing: border-box;
+            border-radius: $main-border-radius-md;
+            border: 1px solid $main-border-color-bluetheme;
+            margin-right: $testeeImgDialogTablelist-margin-md;
+            margin-bottom: $testeeImgDialogTablelist-margin-md;
+            cursor: pointer;
+            &.active{
+              border-color:$main-active-color-bluetheme
+            }
+            &:nth-child(3n+3) {
+              margin-right: 0;
+            }
+            &.last-item{
+              margin-bottom: 0;
+            }  
+            position: relative;  
+            padding: $testeeImgDialogTablelist-item-padding-md;
+            .testeeImgDialog-tablelist-itemcheck{
+             position: absolute;
+             right: -1px;
+             top: -1px;
+             color:$main-succsessIcon-color-bluetheme
+            }
+            .testeeImgDialog-tablelist-img{
+              height: calc(100% - #{$testeeImgDialogTablelist-itemInfo-height-md});
+              img{
+                cursor: pointer!important;
+                @include size();
+              }      
+            }
+            .testeeImgDialog-tablelist-info{
+              height: $testeeImgDialogTablelist-itemInfo-height-md;
+              .testeeImgDialog-tablelist-infotext{
+                font-size: $main-size-md;
+                text-align: center;
+                &:last-child{
+                  font-weight: $main-fontWeight-bold;
+                  text-align: right;
+                }
+                i{
+                  font-size: $main-formIcon-size-md;
+                }         
+                line-height: calc(#{$testeeImgDialogTablelist-itemInfo-height-md} / 2);
+              }
+            }
+          }
+        }
+      }
+
+      .testeeImgDialog-tablelist-operate {
+        height: $testeeImgDialogForm-buttonbox-height-md !important;
+        line-height: $testeeImgDialogForm-buttonbox-height-md !important;
+        box-sizing: border-box;
+        padding: 0 $testeeImgDialogForm-contentbox-padding-md;
+      }
+    }
+
+    .testeeImgDialog-contentbox {
+      @include size();
+      box-sizing: border-box;
+      padding: $testeeImgDialogForm-contentbox-padding-md;
+    }
+  }
+
+}

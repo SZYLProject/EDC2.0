@@ -1,0 +1,32 @@
+$queryForm-listActiveItem-bgColor-bluetheme:rgba(73,164,255,0.10);
+$queryForm-listItem-borderColor-bluetheme:#e4e7ed;
+.queryForm {
+  .queryForm-left{
+    .queryForm-title {
+      span{
+        color:$main-color-bluetheme;
+      }
+    }
+    .queryForm-list{
+
+      border-color:$main-border-color-bluetheme!important;
+      .queryForm-list-item{
+        span{
+         color:$main-color-bluetheme;
+        }
+        &:hover,&.active{
+          background-color: $queryForm-listActiveItem-bgColor-bluetheme;
+        }
+      }
+     }
+  }
+  .queryForm-right{
+    .queryForm-form{
+
+      .el-textarea__inner{
+  
+        color:$main-color-bluetheme;
+      }
+    }
+  }
+}

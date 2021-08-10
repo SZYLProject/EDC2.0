@@ -1,0 +1,51 @@
+$navigationBar-logoTitle-size-sm:16px;
+$navigationBar-logoTitle-paddingLeft-sm:16px;
+$navigationBar-logoImg-width-sm:130px;
+$navigationBar-logoImgBox-width-sm:100px;
+$navigationBar-logoImgBox-height-sm:27px;
+$navigationBar-operateContent-size-sm:12px;
+$navigationBar-operateContent-i-marginLeft-sm:9px;
+$navigationBar-operateContent-i-marginRight-sm:20px;
+$navigationBar-operate-head-size-sm:16px;
+$navigationBar-minWidth-sm:400px;
+.navigationBar {
+  min-width: $navigationBar-minWidth-sm;
+  @include size(100%, $main-navigationBar-height-sm);
+  line-height: $main-navigationBar-height-sm;
+  .navigationBar-logo {
+    .navigationBar-logo-img {
+      @include size($navigationBar-logoImg-width-sm, 100%);
+      i {
+        @include background();
+        @include inlineBlock();
+        @include size($navigationBar-logoImgBox-width-sm, $navigationBar-logoImgBox-height-sm);
+      }
+    }
+
+    .navigationBar-logo-title {
+      font-size: $navigationBar-logoTitle-size-sm;
+      padding-left: $navigationBar-logoTitle-paddingLeft-sm;
+    }
+  }
+
+  .navigationBar-operate {
+    .navigationBar-operate-content {
+      span,
+      i {
+        font-size: $navigationBar-operateContent-size-sm;
+      }
+
+      i {
+        @include margin('', $navigationBar-operateContent-i-marginRight-sm, '', $navigationBar-operateContent-i-marginLeft-sm)
+      }
+
+      .navigationBar-operate-img {
+        font-size: $navigationBar-operate-head-size-sm;
+      }
+
+      .navigationBar-operate-name {
+        @include margin('', '', '', $navigationBar-operateContent-i-marginLeft-sm)
+      }
+    }
+  }
+}

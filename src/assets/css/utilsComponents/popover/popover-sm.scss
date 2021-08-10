@@ -1,0 +1,29 @@
+
+$main-popoverHeader-paddingLeft-sm:8px;
+$main-popoverHeader-paddingTop-sm:8px;
+$main-popoverBody-paddingLeft-sm:16px;
+$main-popoverBody-paddingTop-sm:12px;
+$main-popoverButton-width-sm:60px;
+$main-popoverButton-height-sm:28px;
+.main-popover{
+  // min-height: 400px;
+  // overflow: auto;
+  // z-index: 3000!important;
+  .main-popover-title{
+    @include padding($main-popoverHeader-paddingTop-sm,$main-popoverHeader-paddingLeft-sm,$main-popoverHeader-paddingTop-sm,$main-popoverHeader-paddingLeft-sm);
+    font-size: $main-title-size-sm;
+  }
+  .main-popover-body{
+    @include padding($main-popoverBody-paddingTop-sm,$main-popoverBody-paddingLeft-sm,$main-popoverBody-paddingTop-sm,$main-popoverBody-paddingLeft-sm);
+  }
+  .main-popover-footer{
+
+    .el-button{
+      @include size($main-popoverButton-width-sm,$main-popoverButton-height-sm);
+      font-size: $main-size-sm;
+    }
+    .main-popover-cancelButton{
+       border-radius: $main-border-radius-sm;
+    }
+  }
+}

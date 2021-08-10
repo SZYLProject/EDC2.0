@@ -1,0 +1,51 @@
+$main-scalimgicon-size-md:24px;
+$main-scalimgoperate-size-md:16px;
+.main-scalimg {
+  box-sizing: border-box;
+  @include size();
+  text-align: center;
+  position: relative;
+  &>div{
+    @include size();
+  }
+  .main-scalimg-box {
+    position: relative;
+    
+    overflow: hidden;
+    img {
+      // @include size();
+      position: absolute;
+      left: 0;
+      top: 0;
+      cursor: move;
+    }
+  }
+  .main-scalimg-errorbox{
+      position: relative;
+      .main-scalimg-erroricon{
+        @include center();
+        font-size: $main-scalimgicon-size-md;
+      }
+  }
+  &:hover{
+    .main-scalimg-operate{
+      opacity: 1;
+    }
+  }
+  .main-scalimg-operate{
+    position: absolute;
+    @include size();
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0;
+    i{
+      font-size: $main-scalimgoperate-size-md;
+    }
+    transition: opacity .3s;
+    i{
+      @include center()
+    }
+  }
+}

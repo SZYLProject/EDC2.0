@@ -1,0 +1,9 @@
+
+$main-scalimgoperate-color-bluetheme: #fff;
+$main-scalimgoperate-bgColor-bluetheme: rgba(0,0,0,.5);
+.main-scalimg {
+  .main-scalimg-operate{
+    color: $main-scalimgoperate-color-bluetheme;
+    background-color: $main-scalimgoperate-bgColor-bluetheme
+  }
+}

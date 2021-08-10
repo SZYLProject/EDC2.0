@@ -1,0 +1,13 @@
+
+$floatMenuBox-bgColor-bluetheme:#ffffff;
+
+.floatMenu {
+
+  .floatMenuBox {
+    border-color:$main-border-color-bluetheme!important;
+    background: $floatMenuBox-bgColor-bluetheme;
+    .floatMenu-item {
+      color:$main-color-bluetheme
+    }
+  }
+}

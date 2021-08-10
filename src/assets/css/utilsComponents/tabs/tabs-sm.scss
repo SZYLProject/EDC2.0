@@ -1,0 +1,30 @@
+
+$main-tabsHeader-height-sm:40px;
+$main-tabsBody-padding-sm:14px;
+$main-tabsItem-padding-sm:14px;
+.main-tabs{
+  border-radius: $main-border-radius-sm;
+  .main-tabs-header{
+    height: $main-tabsHeader-height-sm;
+    line-height: $main-tabsHeader-height-sm;
+    .main-tabs-item{
+
+      padding: 0 $main-tabsItem-padding-sm;
+      font-size: $main-title-size-sm;
+      font-weight: $main-fontWeight;
+       &.active{
+        border-bottom: 2px solid;
+      }
+    }
+    .main-tabs-header-operate{
+
+      padding-right: $main-tabsBody-padding-sm;
+    }
+  }
+  .main-tabs-body{
+
+    padding: $main-tabsBody-padding-sm;
+    // overflow: auto;
+    height: calc(100% - #{$main-tabsHeader-height-sm});
+  }
+}

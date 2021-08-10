@@ -1,0 +1,19 @@
+
+$formHeader-item-borderColor-bluetheme:#d5dbe5;
+.formHeader{
+
+  .formHeader-item{
+    border-right-color:$formHeader-item-borderColor-bluetheme!important;
+
+
+    .formHeader-item-word{
+      .formHeader-item-title{
+        color:$main-color-bluetheme;
+
+      }
+      .formHeader-item-info{
+        color:$main-title-color-bluetheme;
+      }
+    }
+  }
+}

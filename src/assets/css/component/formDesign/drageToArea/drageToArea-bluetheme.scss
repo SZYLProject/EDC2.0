@@ -1,0 +1,13 @@
+
+.drageToArea {
+  .drageToArea-item {
+    border-color: $main-border-color-bluetheme!important;
+    &.active {
+      border-color: $main-active-color-bluetheme!important;
+    }
+    .drageToArea-item-activeIcon{
+      color:$main-succsessIcon-color-bluetheme
+    }
+
+  }
+}

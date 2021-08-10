@@ -1,0 +1,16 @@
+$variableValue-buttonBox-height-sm:40px;
+$variableValue-tabsItem-width-sm:60px;
+.variableValue{
+  padding-bottom: $variableValue-buttonBox-height-sm!important;
+  border-radius: $main-border-radius-sm;
+  .main-tabs{
+    .main-tabs-item{
+      width: $variableValue-tabsItem-width-sm;
+    }
+  }
+  .main-buttonBox{
+    height: $variableValue-buttonBox-height-sm!important;
+    line-height: $variableValue-buttonBox-height-sm!important;
+  }
+
+}

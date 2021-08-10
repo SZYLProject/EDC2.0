@@ -1,0 +1,17 @@
+$floatMenuBox-padding-sm:4px;
+$floatMenu-item-width-sm:100px;
+$floatMenu-item-height-sm:36px;
+$floatMenu-item-padding-sm:8px;
+.floatMenu {
+  .floatMenuBox {
+    z-index: 1000;
+    padding: $floatMenuBox-padding-sm;
+    border-radius: $main-border-radius-sm;
+    .floatMenu-item {
+      width: $floatMenu-item-width-sm;
+      line-height: $floatMenu-item-height-sm;
+      font-size: $main-size-sm;
+      padding-left: $floatMenu-item-padding-sm;
+    }
+  }
+}

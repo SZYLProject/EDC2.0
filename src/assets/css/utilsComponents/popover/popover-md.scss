@@ -1,0 +1,35 @@
+
+$main-popoverHeader-paddingLeft-md:10px;
+$main-popoverHeader-paddingTop-md:10px;
+$main-popoverBody-paddingLeft-md:20px;
+$main-popoverBody-paddingTop-md:15px;
+$main-popoverButton-width-md:60px;
+$main-popoverButton-height-md:32px;
+.main-popover{
+  // min-height: 400px;
+  // overflow: auto;
+  // z-index: 3000!important;
+  .main-popover-title{
+    @include padding($main-popoverHeader-paddingTop-md,$main-popoverHeader-paddingLeft-md,$main-popoverHeader-paddingTop-md,$main-popoverHeader-paddingLeft-md);
+    font-size: $main-title-size-md;
+    font-family: $main-fontFamily;
+    font-weight: $main-fontWeight-bold;
+  }
+  .main-popover-body{
+    @include padding($main-popoverBody-paddingTop-md,$main-popoverBody-paddingLeft-md,$main-popoverBody-paddingTop-md,$main-popoverBody-paddingLeft-md);
+  }
+  .main-popover-footer{
+    text-align: right;
+    display: block;
+    .el-button{
+      @include size($main-popoverButton-width-md,$main-popoverButton-height-md);
+      box-sizing: border-box;
+      font-size: $main-size-md;
+      padding: 0;
+    }
+    .main-popover-cancelButton{
+       border: 1px solid ;
+       border-radius: $main-border-radius-md;
+    }
+  }
+}

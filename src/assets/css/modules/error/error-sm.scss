@@ -1,0 +1,10 @@
+$error-404-img-width-sm:280px;
+.error {
+  .error-404 {
+    .main-empty {
+      .main-empty-img {
+        width: $error-404-img-width-sm!important;
+      }
+    }
+  }
+}

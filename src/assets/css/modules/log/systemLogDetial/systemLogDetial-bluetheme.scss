@@ -1,0 +1,11 @@
+
+.systemLogDetial{
+  .systemLogDetial-info{
+    span{
+      color:$main-color-bluetheme;
+      &:first-child{
+        color:$main-title-color-bluetheme
+      }
+    }
+  }
+}

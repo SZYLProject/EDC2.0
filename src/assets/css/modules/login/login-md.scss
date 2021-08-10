@@ -1,0 +1,171 @@
+$login-box-width-md:945px;
+$login-box-height-md:504px;
+$login-box-radius-md: 50px;
+$login-box-logo-width-md:222px;
+$login-box-logo-height-md:54px;
+$login-leftbox-left-md:41px;
+$login-box-logo-top-md:60px;
+$login-box-subtitle-size-md:40px;
+$login-box-subtitle-top-md:261px;
+$login-box-miantitle-size-md:32px;
+$login-box-miantitle-top-md:318px;
+$login-form-title-size-md:32px;
+$login-form-title-top-md:49px;
+$login-rightbox-left-md:36px;
+$login-form-left-md:119px;
+$login-form-item-marginBottom-md:24px;
+$login-form-forgetItem-marginBottom-md:45px;
+$login-form-item-width-md:412px;
+$login-inputInner-radius-md:6px;
+$login-inputInner-size-md:16px;
+$login-inputInner-icon-size-md:18px;
+$login-inputInner-paddingLeft-md:57px;
+$login-inputInner-height-md:46px;
+$login-inputInner-icon-left-md:0;
+$login-button-size-md:16px;
+$login-enter-button-height-md:48px;
+$login-enter-button-radius-md:8px;
+$login-form-code-marginBottom-md:10px;
+$login-form-code-item-width-md:248px;
+$login-form-code-p-marignLeft-md:14px;
+$login-form-successcode-width-md:20px;
+$login-form-codename-letterSpacing-md:12px;
+$login-form-successcode-left-md:-50px;
+$login-form-password-icon-right-md:10px;
+.login {
+  @include size();
+  @include background();
+  position: relative;
+  overflow: hidden;
+  .login-box {
+    @include absolute(50%, "", "", 50%);
+    transform: translate(-50%, -50%);
+    @include size($login-box-width-md,$login-box-height-md);
+    border-radius: $login-box-radius-md;
+    & > div {
+      @include size(50%, 100%);
+      @include inlineBlock();
+      position: relative;
+    }
+    .login-box-left {
+      @include background();
+      .login-box-logo {
+        @include absolute($login-box-logo-top-md, "", "", $login-leftbox-left-md);
+        @include background();
+        @include size($login-box-logo-width-md,$login-box-logo-height-md);
+      }
+      .login-box-subtitle {
+        font-size: $login-box-subtitle-size-md;
+        font-family: $main-title-fontFamily;
+        font-weight: $main-fontWeight;
+
+        @include absolute($login-box-subtitle-top-md, "", "", $login-leftbox-left-md);
+      }
+      .login-box-miantitle {
+        font-size: $login-box-miantitle-size-md;
+        font-family: $main-fontFamily;
+        font-weight: $main-fontWeight;
+        @include absolute($login-box-miantitle-top-md, "", "", $login-leftbox-left-md);
+      }
+    }
+    .login-box-right {
+      .login-form-title {
+        font-size: $login-form-title-size-md;
+        font-family: $main-fontFamily;
+        font-weight: $main-fontWeight;
+        @include absolute($login-form-title-top-md, "", "", $login-rightbox-left-md);
+      }
+      .login-form {
+        @include absolute($login-form-left-md, "", "", $login-rightbox-left-md);
+        .el-form-item {
+          margin-bottom: $login-form-item-marginBottom-md;
+          @include size($login-form-item-width-md);
+          position: relative;
+          .el-input__inner {
+            border-radius: $login-inputInner-radius-md;
+            font-size: $login-inputInner-size-md;
+            @include size('', $login-inputInner-height-md);
+            @include padding('',$login-inputInner-paddingLeft-md,'',$login-inputInner-paddingLeft-md)
+          }
+          .el-input__prefix {
+            display: inline-block;
+            @include size($login-inputInner-paddingLeft-md, $login-inputInner-height-md);
+            i {
+              font-size: $login-inputInner-icon-size-md;
+              @include center()
+            }
+            left: $login-inputInner-icon-left-md;
+          }
+        }
+        .login-form-forget {
+          margin-bottom: $login-form-forgetItem-marginBottom-md;
+          &.login-form-errorforget {
+            margin-bottom: $login-form-item-marginBottom-md;
+          }
+        }
+        .login-forget-button {
+          font-size: $login-button-size-md;
+
+          font-family: $main-fontFamily;
+          font-weight: $main-fontWeight;
+          text-align: center;
+        }
+        .login-enter-button {     
+          @include size($login-form-item-width-md, $login-enter-button-height-md);  
+          border-radius: $login-enter-button-radius-md;
+          font-size: $login-button-size-md;
+          font-family: $main-fontFamily;
+          font-weight: $main-fontWeight; 
+        }
+        .login-form-code {
+          margin-bottom: $login-form-code-marginBottom-md;
+          .el-input {
+            width: $login-form-code-item-width-md;
+            display: inline-block;
+          }
+          .login-form-button {
+            display: inline-block;
+            margin-left: $login-form-code-p-marignLeft-md;
+            cursor: pointer;
+            width: calc(#{$login-form-item-width-md - $login-form-code-p-marignLeft-md - $login-form-code-item-width-md });
+            text-align: center;
+            vertical-align: middle;
+            .login-form-codename {
+              letter-spacing: $login-form-codename-letterSpacing-md;
+            }
+            position: relative;
+          }
+          .login-form-successcode {
+            @include absolute(50%, "", "", $login-form-successcode-left-md);
+            @include size($login-form-successcode-width-md,$login-form-successcode-width-md);
+            display: inline-block;
+            transform: translateY(-50%);
+            @include background();
+          }
+        }
+        .login-back {
+          text-align: center;
+          .el-button {
+            display: inline-block;
+            span {
+              font-size: $login-button-size-md;
+              font-family: $main-fontFamily;
+              font-weight: $main-fontWeight; 
+              text-align: center;
+              border-bottom:1px solid;
+              border-radius: $main-border-radius-md;
+              // line-height: 20px;
+              // letter-spacing: 2px;
+            }
+          }
+        }
+        .login-form-password-icon{
+          @include absolute(50%, $login-form-password-icon-right-md, "", '');
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+          font-size: $login-inputInner-icon-size-md;
+        }
+      }
+    }
+  }
+}

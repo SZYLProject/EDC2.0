@@ -1,0 +1,12 @@
+.optionSetFormDrawer{
+	@include size();
+  .optionSetFormDrawer-upload,.el-upload{
+    .el-button,span{
+      width: 100%; 
+      span{
+        display: inline-block;
+      }
+    }
+    width: 100%; 
+  }
+}

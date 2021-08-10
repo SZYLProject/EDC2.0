@@ -1,0 +1,79 @@
+$formEntryLeft-width-sm:260px;
+$formEntryLeft-padding-sm:10px;
+$formEntryLeft-serach-height-sm:32px;
+$formEntry-formHeader-height-sm:90px;
+$formEntry-formHeader-margin-sm:14px;
+$formEntry-formTitle-height-sm:40px;
+$formEntry-form-padding-sm:14px;
+$formEntry-searchForm-label-width-sm:100px;
+$formEntry-formHeader-minWidth-sm:1000px;
+$formEntry-contentItem-margin-sm:10px;
+.formEntry {
+  .formEntry-content {
+    .formEntry-left {
+      @include size($formEntryLeft-width-sm, 100%);
+      border-radius: $main-border-radius-sm;
+      padding: $formEntryLeft-padding-sm;
+
+      .formEntry-left-serach {
+        .el-form-item__content {
+          line-height: $main-formInput-height-sm !important;
+          height: $main-formInput-height-sm !important;
+        }
+      }
+
+      .formEntry-left-tree {
+        height: calc(100% - #{$main-formInput-height-sm + $main-form-margin-sm});
+      }
+    }
+
+    .formEntry-right {
+      @include size(calc(99% - #{$formEntryLeft-width-sm}), 100%);
+    
+      .formEntry-formHeader {
+        height: $formEntry-formHeader-height-sm;
+
+        margin-bottom: $formEntry-formHeader-margin-sm;
+        min-width: $formEntry-formHeader-minWidth-sm;
+      }
+
+      .formEntry-form {
+        min-width: $formEntry-formHeader-minWidth-sm;
+        @include size(100%, calc(100% - #{$formEntry-formHeader-height-sm + $formEntry-formHeader-margin-sm}));
+    
+        border-radius: $main-border-radius-sm;
+   
+        padding-bottom: $main-buttonBox-height-sm;
+        .formEntry-formTitle {
+          height: $formEntry-formTitle-height-sm;
+      
+          line-height: $formEntry-formTitle-height-sm;
+          padding: 0 $formEntry-form-padding-sm;
+          margin-bottom: $formEntry-formHeader-margin-sm;
+
+          .formEntry-formTitle-title{
+            color:$main-active-color-bluetheme;
+            font-size: $main-title-size-sm;
+            font-weight: $main-fontWeight-bold;
+          }
+          .main-searchForm{
+            height: $formEntry-formTitle-height-sm;
+            line-height: $formEntry-formTitle-height-sm;
+            .main-searchForm-label{
+              width:$formEntry-searchForm-label-width-sm;
+           }
+          }
+       
+        }
+        .formEntry-content{
+          padding: 0 $formEntry-form-padding-sm;
+          height: calc(100% - #{$formEntry-formTitle-height-sm + $formEntry-formHeader-margin-sm});
+
+        }
+      }
+    }
+  }
+  .formEntry-content-item {
+    margin-bottom: $formEntry-contentItem-margin-sm;
+  }
+}

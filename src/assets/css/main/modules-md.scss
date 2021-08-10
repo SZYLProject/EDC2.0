@@ -1,0 +1,561 @@
+.main-direction-option {
+  display: inline-block;
+  margin-right: 0;
+  width: 100%;
+
+}
+
+//下拉联级选择器
+.main-cascader-option {
+  .el-cascader-menu {
+    height: $main-cascaderOption-height-md;
+
+    .el-cascader-menu__wrap {
+      overflow-x: hidden;
+    }
+  }
+}
+
+
+// 下拉框
+.main-dropdown-menu {
+  @include margin($main-dropdown-margin-md, '', $main-dropdown-margin-md, '');
+
+  .el-dropdown-menu__item {
+    font-size: $main-size-md !important;
+    font-family: $main-fontFamily !important;
+    font-weight: $main-fontWeight;
+    line-height: $main-option-lineHeight-md;
+
+    span {
+      font-size: $main-size-md !important;
+      font-family: $main-fontFamily !important;
+      vertical-align: top;
+    }
+  }
+}
+
+.el-select-dropdown {
+
+  .el-select-dropdown__item {
+    font-size: $main-size-md !important;
+    font-family: $main-fontFamily !important;
+    font-weight: $main-fontWeight !important;
+    line-height: $main-option-lineHeight-md;
+  }
+
+}
+
+//radio组
+.main-radio-group {
+  .el-radio-button {
+    .el-radio-button__inner {
+      @include padding($main-primaryButton-paddingTop-md, $main-primaryButton-paddingLeft-md, $main-primaryButton-paddingTop-md, $main-primaryButton-paddingLeft-md);
+      font-size: $main-size-md !important;
+      font-family: $main-fontFamily !important;
+      font-weight: $main-fontWeight;
+    }
+
+  }
+}
+
+// 盒子
+.main-box {
+  @include size(100%, 100%);
+  overflow-x: hidden
+}
+
+// 内容
+.main-container {
+  @include size(100%, calc(100% - #{$main-navigationBar-height-md}));
+  padding: $main-container-padding-md;
+  box-sizing: border-box;
+  // overflow-x:hidden 
+}
+
+// 实际内容区
+.main-content {
+  @include size(100%, 100%);
+  min-width: $main-content-minWidth-md;
+}
+
+
+
+// 包含导航条和分页内容区
+.main-navBarPagination-content {
+  @include size(100%, calc(100% - #{$main-naviBar-height-md}));
+  box-sizing: border-box;
+  @include padding(0, $main-content-paddingLeft-md, $main-pagination-height-md, $main-content-paddingLeft-md);
+
+}
+
+// 正常导航条内容区
+.main-plainNavBar-content {
+  @include size(100%, calc(100% - #{$main-naviBar-height-md}));
+  box-sizing: border-box;
+  @include padding(0, 0, 0, 0);
+}
+
+// 只有导航条的内容区
+.main-navBar-content {
+  @include size(100%, calc(100% - #{$main-naviBar-height-md}));
+  box-sizing: border-box;
+  @include padding(0, $main-content-paddingLeft-md, 0, $main-content-paddingLeft-md);
+  overflow: auto;
+}
+
+// 搜索栏
+.main-searchNav-content {
+  @include size(100%, calc(100% - #{$main-naviBar-height-md}));
+  box-sizing: border-box;
+  @include padding(0, 0, 0, 0);
+  overflow: auto;
+}
+
+// 表格内容区
+.main-table-content {
+  @include size(100%, 100%);
+  box-sizing: border-box;
+  position: relative;
+  overflow: auto;
+}
+
+// 表格内容区
+.main-plainTable-content {
+  @include size(100%, 100%);
+  box-sizing: border-box;
+  position: relative;
+  overflow: auto;
+  @include padding($main-content-paddingTop-md, 0, $main-content-paddingTop-md, 0);
+}
+
+// 包含分页内容区
+.main-pagination-content {
+  @include size(100%, 100%);
+  box-sizing: border-box;
+  @include padding(0, 0, $main-pagination-height-md, 0);
+}
+
+// 底部是按钮
+.main-button-content {
+  @include size(100%, 100%);
+  box-sizing: border-box;
+  @include padding(0, 0, $main-buttonBox-height-md, 0);
+}
+
+// 正常内容区
+.main-plain-content {
+  @include size(100%, 100%);
+  box-sizing: border-box;
+  @include padding(0, 0, 0, 0);
+}
+
+
+//card内容区
+.main-card-content {
+  @include size(100%, 100%);
+  box-sizing: border-box;
+  position: relative;
+  @include padding(0, 0, 0, 0);
+  overflow: auto;
+}
+
+//正常card内容区
+.main-plainCard-content {
+  @include size(100%, 100%);
+  box-sizing: border-box;
+  position: relative;
+  @include padding($main-content-paddingTop-md, $main-content-paddingLeft-md, $main-content-paddingTop-md, $main-content-paddingLeft-md);
+  overflow: auto;
+}
+
+//主要按钮
+.main-primaryCircle-button,
+.main-errorCircle-button {
+  @include padding($main-primaryCirleButton-padding-md, $main-primaryCirleButton-padding-md, $main-primaryCirleButton-padding-md, $main-primaryCirleButton-padding-md);
+  border-radius: 50% !important;
+
+  i,
+  span {
+    font-size: $main-size-md;
+    font-family: $main-fontFamily;
+  }
+}
+
+
+//主要按钮
+.main-primary-button,
+.main-cancel-button {
+  @include padding($main-primaryButton-paddingTop-md, $main-primaryButton-paddingLeft-md, $main-primaryButton-paddingTop-md, $main-primaryButton-paddingLeft-md);
+
+  i,
+  span {
+    font-size: $main-size-md;
+    font-family: $main-fontFamily;
+  }
+}
+
+//主要字体按钮
+.main-primaryIcon-button,
+.main-errorIcon-button,
+.main-warningIcon-button,
+.main-primaryTableIcon-button {
+  font-size: $main-imgButton-size-md !important;
+  cursor: pointer;
+  vertical-align: middle;
+
+  &.el-button {
+    border: none;
+    padding: 0;
+
+    i,
+    span {
+      font-size: $main-imgButton-size-md !important;
+    }
+  }
+}
+
+// 主要图片字体按钮
+.main-primaryTableIcon-button {
+  @include size($main-imgButton-size-md, $main-imgButton-size-md)
+}
+
+//普通按钮
+.main-plain-button {
+  @include padding($main-plainButton-paddingTop-md, $main-plainButton-paddingLeft-md, $main-plainButton-paddingTop-md, $main-plainButton-paddingLeft-md);
+
+  i,
+  span {
+    font-size: $main-plain-size-md;
+    font-family: $main-fontFamily;
+
+  }
+}
+
+//包含图片的按钮
+.main-img-button {
+  img {
+    @include size($main-imgButton-size-md, $main-imgButton-size-md);
+  }
+
+  img,
+  span,
+  i {
+    vertical-align: middle;
+  }
+}
+
+//字体按钮
+.main-primaryText-button,
+.main-plainText-button {
+  font-size: $main-size-md !important;
+  font-family: $main-fontFamily !important;
+  font-weight: $main-fontWeight-bold !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+//table字体图标
+.main-table-icon {
+  font-size: $main-imgButton-size-md !important;
+}
+
+//搜索按钮输入框
+.main-search-input {
+  @include size($main-searchInput-width-md, $main-searchInput-height-md);
+
+  .el-input__inner {
+    height: $main-searchInput-height-md;
+    line-height: $main-searchInput-height-md;
+    font-size: $main-size-md;
+    font-family: $main-fontFamily;
+
+  }
+
+  .el-input__suffix {
+    right: $main-searchInputIcon-right-md;
+
+    .el-input__suffix-inner {
+
+      i {
+        font-size: $main-searchInputIcon-size-md;
+        font-weight: $main-fontWeight-bold;
+        cursor: pointer;
+      }
+
+    }
+  }
+
+}
+
+
+
+// 分页
+.main-pagination {
+  @include size(100%, $main-pagination-height-md);
+  position: relative;
+
+  .el-pagination {
+    position: absolute;
+    @include absolute(50%, 0, '', '');
+    transform: translateY(-50%);
+
+    i,
+    li,
+    span {
+      font-size: $main-size-md !important;
+      font-family: $main-fontFamily;
+    }
+
+
+  }
+}
+
+// 下拉框
+.el-select-dropdown {
+  @include margin($main-dropdown-margin-md, '', $main-dropdown-margin-md, '');
+
+  .el-select-dropdown__item {
+    font-size: $main-size-md;
+    font-family: $main-fontFamily;
+    font-weight: $main-fontWeight;
+    line-height: $main-option-lineHeight-md;
+  }
+}
+
+// 图标label
+.main-icon-label {
+  i {
+    font-size: $main-iconLabel-size-md;
+    margin-right: $main-iconLabel-margin-md;
+    vertical-align: middle;
+  }
+
+  span {
+    font-size: $main-title-size-md;
+    font-family: $main-fontFamily;
+    font-weight: $main-fontWeight-bold;
+    vertical-align: middle;
+
+    &.main-icon-label-back {
+      font-size: $main-iconLabel-size-md;
+      margin-right: $main-iconLabel-margin-md;
+    }
+  }
+}
+
+// 状态label
+.main-status-label {
+  i {
+    display: inline-block;
+    @include size($main-size-md, $main-size-md);
+    box-sizing: border-box;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  font-size:$main-size-md;
+  font-weight: $main-fontWeight-bold;
+  vertical-align: middle;
+}
+
+// 禁止
+.main-disable {
+  cursor: no-drop !important;
+  // pointer-events: none;
+}
+
+// 错误盒子
+.main-errorBox {
+  @include size(100%, 100%);
+}
+
+// 空页面
+.main-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include size(100%, 100%);
+
+  .main-empty-box {
+    text-align: center;
+
+    .main-empty-error {
+      font-size: $main-empty-label-size-md;
+      font-weight: $main-fontWeight-bold;
+      text-align: center;
+      // ma
+      margin-bottom: $main-empty-img-margin-md;
+    }
+
+    .main-empty-img {
+      @include size($main-empty-img-width-md, $main-empty-img-height-md);
+      margin-bottom: $main-empty-img-margin-md;
+    }
+  }
+}
+
+// 卡片
+.main-card {
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: $main-border-radius-md;
+  @include padding($main-card-paddimgTop-md, $main-card-paddimgLeft-md, $main-card-paddimgTop-md, $main-card-paddimgLeft-md);
+  margin-bottom: $main-card-marginBottom-md;
+
+  // &:last-child {
+  //   // margin-bottom: 0;
+  // }
+
+  .main-card-title {
+    height: $main-card-title-height-md;
+    line-height: $main-card-title-height-md;
+    position: relative;
+  }
+
+  .main-card-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .main-card-info {
+      height: $main-card-title-height-md;
+      line-height: $main-card-title-height-md;
+
+      span {
+        font-size: $main-size-md;
+        font-family: $main-fontFamily;
+        font-weight: $main-fontWeight-bold;
+      }
+    }
+
+    .el-form-item {
+      margin-bottom: 0;
+
+      .el-form-item__label,
+      span,
+      .el-form-item__content {
+
+        font-size: $main-size-md;
+        font-family: $main-fontFamily;
+        font-weight: $main-fontWeight-bold;
+        line-height: $main-card-title-height-md;
+      }
+    }
+  }
+
+}
+
+// 间隔
+.main-buttonSpace {
+  margin-left: $main-buttonSpace-marign-md !important;
+}
+
+// 基本间隔
+.main-space {
+  margin-left: $main-space-marign-md !important;
+}
+
+// 按钮盒子区
+.main-buttonBox {
+  text-align: right;
+  height: $main-buttonBox-height-md;
+  line-height: $main-buttonBox-height-md;
+  box-sizing: border-box;
+  @include padding(0, $main-content-padding-md, 0, $main-content-padding-md);
+
+  .el-button {
+    @include size($main-buttonBox-button-width-md, $main-buttonBox-button-height-md);
+
+    i,
+    span {
+      font-size: $main-buttonBox-button-size-md;
+    }
+  }
+}
+
+// 滚动条
+.main_scrollbar {
+  height: 100%;
+  width: 100%;
+
+  .el-scrollbar__wrap {
+    overflow-x: hidden;
+
+    .el-scrollbar__view {
+      height: 100%;
+
+    }
+  }
+}
+
+// 列表
+.main-tarilList {
+  .main-tarilList-item {
+    padding: $main-tarilListItem-padding-md;
+    border-left: 1px solid;
+    position: relative;
+
+    &::after {
+      @include size($maintarilListItemCricle-md, $maintarilListItemCricle-md);
+      border-radius: 50%;
+      display: block;
+      content: '';
+      @include absolute(50%, '', '', 0);
+      transform: translate(-50%, -50%);
+    }
+
+    &>div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $main-tarilListItem-marginBottom-md;
+    }
+
+    .main-tarilListItem-name {
+
+      i,
+      span {
+        font-size: $main-title-size-md;
+      }
+
+      span {
+        font-weight: $main-fontWeight-bold;
+      }
+    }
+
+    i,
+    span {
+      font-size: $main-size-md;
+      font-family: $main-fontFamily;
+      font-weight: $main-fontWeight;
+    }
+  }
+}
+
+// 切换开关
+.main-switch {
+  .el-switch__core {
+    height: calc(#{$main-switch-width-md}/ 2) !important;
+    line-height:calc(#{$main-switch-width-md}/2) !important;
+    width: $main-switch-width-md !important;
+
+    &:after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .el-switch__label {
+    font-size: $main-size-md;
+
+    span {
+      font-size: $main-size-md;
+    }
+
+    &.is-active {
+      font-weight: $main-fontWeight-bold;
+    }
+  }
+}

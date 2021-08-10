@@ -1,0 +1,118 @@
+$treeNav-content-height-md:40px;
+$treeNav-treeItem-padding-md:10px;
+$treeNav-treeItemTwo-padding-md:30px;
+$treeNav-circle-width-md:12px;
+$treeNav-circleBefore-width-md:4px;
+$treeNav-treeNode-magin-md:10px;
+.treeNav {
+  @include size();
+  .el-tree-node__content {
+    position: relative;
+    height: $treeNav-content-height-md;
+    line-height: $treeNav-content-height-md;
+    padding-left: 0!important;
+  }
+  .el-tree-node__expand-icon,
+  .expanded {
+    right: 0;
+    @include verticalCenter();
+
+    &.expanded {
+      transform: translateY(-50%) rotate(90deg)
+    }
+  }
+
+  .el-tree-node__expand-icon{
+    display: none;
+  }
+
+  .el-tree-node__expand-icon:before,
+  .expanded:before {
+    display: block;
+    content: "";
+
+  }
+  .el-tree-node {
+    margin-bottom: $treeNav-treeNode-magin-md;
+    &:last-child{
+      margin-bottom: 0px;
+    }
+    &.is-expanded {
+      .treeNav-levelOne-icon {
+        transform: translateY(-50%) rotate(90deg)
+      }
+    }
+  }
+  .el-tree-node__children{
+    .el-tree-node {
+      &:first-child{
+        margin-top: $treeNav-treeNode-magin-md;
+      }
+      margin-bottom: 0px;
+    }
+  }
+  .treeNav-tree-item {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 $treeNav-treeItem-padding-md;
+    font-size: $main-size-md;
+
+    .treeNav-levelOne {
+      position: relative;
+      font-size: $main-size-md;
+
+      font-weight: $main-fontWeight-bold;
+
+      .treeNav-levelOne-icon {
+        transition: transform .3s ease-in-out;
+        right: 0;
+        @include verticalCenter();
+        font-weight: $main-fontWeight-bold;
+      }
+    }
+
+    .treeNav-levelTwo {
+      box-sizing: border-box;
+      padding-left: $treeNav-treeItemTwo-padding-md;
+      position: relative;
+
+      &::before {
+        content: "";
+        height: 100%;
+        position: absolute;
+        left:calc(#{$treeNav-treeItemTwo-padding-md} /2);
+        border-left: 2px solid ;
+      }
+
+      .treeNav-circle {
+        display: block;
+        width: $treeNav-circle-width-md;
+        height: $treeNav-circle-width-md;
+        position: absolute;
+        border-radius: 50%;
+        @include center();
+        left: calc(#{$treeNav-treeItemTwo-padding-md} /2);
+
+      }
+      @include transition();
+      &.active,&:hover {
+        font-weight: $main-fontWeight-bold;
+        .treeNav-circle {
+          &::after {
+            width: $treeNav-circleBefore-width-md;
+            height: $treeNav-circleBefore-width-md;
+    
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            @include center();
+          }
+        }
+      }
+      &.treeNav-sdvStatus-info {
+        font-weight: $main-fontWeight-bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+
+.login {
+  background-image: url("~assets/img/login/bluetheme/login-bg-md.png");
+  .login-box {
+    .login-box-left {
+      background-image: url("~assets/img/login/bluetheme/login-formbg-md.png");
+      .login-box-logo {
+        background-image: url("~assets/img/login/bluetheme/login-logo-md.png");
+      }
+    }
+    .login-box-right {
+      .login-form-successcode {
+        background-image: url("~assets/img/login/bluetheme/login-logo-successcode-md.svg");
+      }
+    }
+  }
+}

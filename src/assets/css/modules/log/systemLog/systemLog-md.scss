@@ -1,0 +1,13 @@
+
+$systemLog-searchForm-minWidth-md:1600px;
+.systemLog{
+  overflow-x: auto;
+  overflow-y: hidden;
+  .main-searchForm{
+    min-width: $systemLog-searchForm-minWidth-md;
+  }
+  .systemLog-table{
+    min-width: $systemLog-searchForm-minWidth-md;
+    height: calc(100% - #{$main-searchForm-height-md * 2})!important;
+  }
+}

@@ -1,0 +1,51 @@
+
+.navBar {
+
+
+  &.isBorder {
+    border-bottom-color: $main-border-color-bluetheme!important;
+  }
+
+
+
+  .navBar-environment,
+  .navBar-version {
+    span {
+      color: $main-color-bluetheme;
+    }
+  }
+  .navBar-environment {
+    span {
+      &.test {
+        color: $main-test-color-bluetheme;
+        border-color: $main-test-color-bluetheme!important;
+      }
+
+      &.proud {
+        color: $main-proud-color-bluetheme;
+        border-color: $main-proud-color-bluetheme!important;
+      }
+    }
+
+
+  }
+
+  .el-tabs {
+
+    .el-tabs__item {
+      color: $main-color-bluetheme;
+      &.is-active,
+      &:hover {
+        color: $main-active-color-bluetheme;
+        border-color: $main-active-color-bluetheme!important;
+      }
+      .center-tip{
+        color: $main-error-color-bluetheme !important;
+      }
+    }
+  }
+
+  .navBar-more {
+    color: $main-color-bluetheme;
+  }
+}

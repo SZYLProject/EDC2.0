@@ -1,0 +1,179 @@
+import {formatDate} from './index'
+
+let outerDdMap = {};
+let currentDdMap = {};
+let calArr = [];
+let ddItem = {};
+let calOper = ["+", "-", "*", "/"];
+
+export function handleCalculate(dd) {
+    outerDdMap = dd.calMap.outerDdMap
+    currentDdMap = dd.calMap.currentDdMap;
+    calArr = dd.calMap.calculate;
+    ddItem = dd
+    let r = canCalculate();
+    if (r)
+        return doCalculate(calArr);
+    return "";
+}
+
+function doCalculate(expArray) {
+    console.log('转换的后缀表达式', expArray);
+    let stack = [];
+    let top = -1;
+    for (let i in expArray) {
+
+        let ele = expArray[i];
+        if (ele.startsWith("Math"))
+            ele = handleMathExp(ele);
+
+        if (isSingleDdcode(ele))
+            ele = outerDdMap[ele] ? outerDdMap[ele] : currentDdMap[ele]
+
+        if (isOper(ele)) {
+            let var1 = stack[top--];
+            let var2 = stack[top--];
+            if (isNum(var1) && isNum(var2)) {
+                stack[++top] = eval(var2 + ele + var1);
+            } else if ((isTime(var1) && isTime(var2))) {
+                stack[++top] = handleDTSub(var2, var1, 'TP');
+            } else if ((isDate(var1) || isDatetime(var1)) && (isDate(var2) || isDatetime(var2))) {
+                stack[++top] = handleDTSub(var2, var1, 'DP');
+            } else {
+                stack[++top] = (isTime(var1) && isNum(var2)) || (isTime(var2) && isNum(var1))
+                    ? (isTime(var1)
+                        ? timeCal(var1, var2, ele)
+                        : timeCal(var2, var1, ele))
+                    : ((isDatetime(var1) || isDate(var1))
+                        ? dateCal(var1, var2, ele, getDdType(var1))
+                        : dateCal(var2, var1, ele, getDdType(var2)));
+            }
+        } else {
+            stack[++top] = ele;
+        }
+    }
+    console.log('计算结果', stack[top]);
+    return stack[top];
+}
+
+//验证是否满足计算条件,如果某个表达式的dd值为空,则不进行计算
+function canCalculate() {
+    if (ddItem.calMap.canCalculate)
+        return true;
+
+    if (!outerDdMap || !currentDdMap)
+        return false;
+
+    for (let o in outerDdMap)
+        if (!outerDdMap[o])
+            return false;
+
+    for (let o in currentDdMap)
+        if (!currentDdMap[o] || currentDdMap[o] == 'EMPTY_STRING')
+            return false;
+
+    return true;
+}
+
+function isOper(ele) {
+    return calOper.indexOf(ele) >= 0;
+}
+
+function isNum(n) {
+    return /^(-)?\d+(\.\d+)?$/.test(n);
+}
+
+function isTime(n) {
+    return new RegExp(/^(?:\d{1,2}):\d{2}$/).test(n);
+}
+
+function isDate(n) {
+    // let pattern = new RegExp(/\b(\d{4})-(\d{2})-(\d{2})\b/);
+    return new RegExp(/\b(\d{4})\/(\d{2})\/(\d{2})\b/).test(n);
+}
+
+function isDatetime(n) {
+    return new RegExp(/\b(\d{4})-(\d{2})-(\d{2})\b (?:\d{2}):\d{2}:\d{2}$/).test(n);
+}
+
+
+//处理时间日期差
+function handleDTSub(t1, t2, calType) {
+    let r2 = '';
+    if (calType == 'TP') {
+        let d1 = new Date("1000-10-10 " + t1);
+        let d2 = new Date("1000-10-10 " + t2);
+        r2 = (d1 - d2) / 1000 / 60;
+    } else if (calType == 'DP' || calType == 'DTP') {
+        let d1 = new Date(t1.slice(0, 10))
+        let d2 = new Date(t2.slice(0, 10))
+        r2 = Math.floor((d1 - d2) / 1000 / 60 / 60 / 24);
+    }
+    return r2;
+}
+
+function timeCal(time, num, oper) {
+    let d1 = new Date("1000-10-10 " + time);
+    let d3 = new Date(getTimeCalRes(d1.getTime(), num * 60 * 1000, oper));
+    let a = d3.getMinutes(), b;
+    let r1 = d3.getHours() + ":" + (a > 10 ? a : '0' + a);
+    console.log(r1, '=====================');
+    if (r1.indexOf("NaN") >= 0)
+        return '';
+    return r1;
+}
+
+function getTimeCalRes(n1, n2, oper) {
+    switch (oper) {
+        case '+':
+            return n1 + n2;
+        case '-':
+            return n1 - n2;
+        case '*':
+            return n1 * n2;
+        case '/':
+            return n1 / n2;
+    }
+}
+
+function dateCal(date, num, oper, currentResultType) {
+    let d1 = getDateCalRes(new Date(date), num, oper);
+    let r3 = formatDate(d1, currentResultType == 'DTP' ? 'yyyy-MM-dd HH:mm:ss' : 'yyyy/MM/dd');
+    if (r3.indexOf("NaN") >= 0)
+        return '';
+    return r3;
+}
+
+function getDateCalRes(oldDate, d, oper) {
+    let dd = new Date(oldDate);
+    if (oper == '+')
+        dd.setDate(dd.getDate() + Number(d));
+    else
+        dd.setDate(dd.getDate() - Number(d));
+    return dd;
+}
+
+function getDdType(ddValue) {
+    if (isNum(ddValue))
+        return "NTX";
+    else if (isTime(ddValue))
+        return "TP";
+    else if (isDate(ddValue))
+        return "DP";
+    else if (isDatetime(ddValue))
+        return "DTP";
+    else
+        return '';
+}
+
+function handleMathExp(ele, ddReg = /\b[a-z0-9]{16}\b/gi) {
+    let match = ele.match(ddReg) || [];
+    let e2 = ele;
+    for (let i in match)
+        e2 = e2.replace(match[i], outerDdMap[match[i]] ? outerDdMap[match[i]] : currentDdMap[match[i]])
+    return eval(e2);
+}
+
+function isSingleDdcode(n) {
+    return /[a-z0-9]{16}$/.test(n);
+}

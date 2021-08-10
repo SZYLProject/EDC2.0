@@ -1,0 +1,18 @@
+// SM——小号 （S号）
+// MD——中号 （M号）
+// LG——大号 (L号)
+// XL——更大一号咯（XL号）
+@import './main/modules-md';
+@import './utilsComponents/modules-md';
+@import './component/modules-md';
+@import './modules/modules-md';
+@import './main/modules-bluetheme-md';
+@import './component/modules-bluetheme-md';
+@import './utilsComponents/modules-bluetheme-md';
+@import './modules/modules-bluetheme-md';
+@media (max-width: 1370px)and(max-height: 768px) {
+  @import './main/modules-sm';
+  @import './modules/modules-sm'; 
+  @import './utilsComponents/modules-sm';
+  @import './component/modules-sm';  
+}

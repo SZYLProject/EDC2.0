@@ -1,0 +1,60 @@
+// $main-tableTh-color-
+$main-tableTh-height-md:48px;
+
+.main-table,
+.main-form-table {
+  width: 100%;
+
+  &.main-table {
+    .el-table {
+      border: none !important;
+    }
+
+    td,
+    th,
+    .el-table__empty-text {
+      border: none !important;
+    }
+
+    .el-table::before {
+      height: 0px;
+    }
+  }
+
+
+  thead {
+    th {
+      font-weight: $main-fontWeight-bold;
+    }
+  }
+
+  td,
+  th {
+    padding: 0 !important;
+  }
+
+  td,
+  th,
+  .el-table__empty-text,.cell {
+    height: $main-tableTh-height-md;
+    line-height: $main-tableTh-height-md;
+    font-size: $main-size-md;
+    font-family: $main-fontFamily;
+  
+    span,
+    i,
+    img {
+      vertical-align: middle;
+    }
+  }
+
+
+  .el-table__empty-text {
+    font-weight: $main-fontWeight-bold;
+  }
+
+  .el-table__fixed-right::before,
+  .el-table__fixed::before {
+    height: 0;
+  }
+}

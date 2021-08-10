@@ -1,0 +1,47 @@
+$login-box-title-color-bluetheme:#fff;
+$login-box-bgColor-bluetheme:#fff;
+$login-form-title-color-bluetheme:#333333;
+$login-form-icon-color-bluetheme:#cccccc;
+$login-form-errorcode-color-bluetheme:#f56c6c;
+$login-back-color-bluetheme:#49a4ff;
+$login-forget-button-color-bluetheme:#b3b3b3;
+$login-enter-button-color-bluetheme:#ffffff;
+$login-enter-button-bgColor-bluetheme:#0076f6;
+.login {
+ .login-box {
+    background-color: $login-box-bgColor-bluetheme;
+    .login-box-left {
+      .login-box-subtitle,
+      .login-box-miantitle {
+        color: $login-box-title-color-bluetheme;
+      }
+    }
+    .login-box-right {
+      .login-form-title {
+        color: $login-form-title-color-bluetheme;
+      }
+      .el-input__prefix>i ,.login-form-password-icon{
+        color: $login-form-icon-color-bluetheme;
+      }
+      .login-form-errorcode {
+        color: $login-form-errorcode-color-bluetheme;
+      }
+      .login-back {
+        .el-button {
+          span {
+            border-color:$login-back-color-bluetheme!important;
+            color: $login-back-color-bluetheme; 
+            // letter-spacing: 2px;
+          }
+        }
+      }
+      .login-forget-button{
+        color: $login-forget-button-color-bluetheme;
+      }
+      .login-enter-button {
+        color: $login-enter-button-color-bluetheme;
+        background: $login-enter-button-bgColor-bluetheme;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+$main-dialogHeader-paddingLeft-md:20px;
+$main-dialogHeader-paddingTop-md:16px;
+$main-dialogHeader-icon-size-md:20px;
+$main-headerbtn-top-md:20px;
+$main-dialogBody-paddingLeft-md:52px;
+$main-dialogBody-paddingTop-md:10px;
+$main-dialogButton-width-md:80px;
+$main-dialogButton-height-md:34px;
+$main-dialogTitle-height-md:22px;
+// .el-dialog__wrapper{
+//   // z-index: 9999!important;
+// }
+.main-dialog {
+  .el-dialog__header {
+    @include padding($main-dialogHeader-paddingTop-md,$main-dialogHeader-paddingLeft-md,$main-dialogHeader-paddingTop-md,$main-dialogHeader-paddingLeft-md);
+    position: relative;
+    .main-dialog-title {
+     line-height: $main-dialogTitle-height-md;
+      @include size(100%,$main-dialogTitle-height-md);
+      i {
+        font-size: $main-dialogHeader-icon-size-md;
+        vertical-align: middle;
+      }
+      span {
+        font-size: $main-title-size-md;
+        font-family: $main-fontFamily;
+        font-weight: $main-fontWeight-bold;
+       
+        margin-left: $main-buttonSpace-marign-md;
+        vertical-align: middle;
+      }   
+    }
+    .el-dialog__headerbtn {
+      top: $main-headerbtn-top-md!important;
+      .el-dialog__close {
+        font-size: $main-dialogHeader-icon-size-md;
+        font-weight: $main-fontWeight-bold;
+  
+      }
+    }
+  }
+  .el-dialog__body{
+    @include padding(0,$main-dialogBody-paddingLeft-md,$main-dialogBody-paddingTop-md,$main-dialogBody-paddingLeft-md);
+    overflow: auto;
+  }
+  .main-dialog-footer{
+    text-align: right;
+    display: block;
+    @include size(100%,$main-dialogButton-height-md);
+    line-height:$main-dialogButton-height-md ;
+    .el-button{
+      @include size($main-dialogButton-width-md,$main-dialogButton-height-md);
+      box-sizing: border-box;
+      font-size: $main-size-md;
+      padding: 0;
+      // .el-button--default
+    }
+    .main-dialog-cancelButton{
+       border: 1px solid ;
+    }
+  }
+
+}

@@ -1,0 +1,166 @@
+$entryDialog-header-height-sm:38px;
+$entryDialog-body-padding-sm:15px;
+$entryDialogForm-show-imglist-width-sm:160px;
+$entryDialogForm-operate-width-sm:40px;
+$entryDialogForm-show-width-sm:55%;
+$entryDialogForm-buttonbox-height-sm:48px;
+$entryDialogForm-operateButton-width-sm:32px;
+$entryDialogForm-show-imglist-padding-sm:4px;
+$entryDialogForm-show-imglistpagination-height-sm:32px;
+$entryDialogForm-show-operate-height-sm:32px;
+$entryDialogForm-content-minWidth-sm:1200px;
+
+.entryDialog {
+  .el-dialog__header {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: $entryDialog-header-height-sm;
+    line-height: $entryDialog-header-height-sm;
+    @include flex('', '', space-between);
+    .main-dialog-title {
+      line-height: inherit !important;
+      height: auto !important;
+    }
+  }
+
+  .el-dialog__body {
+    @include size(100%, calc(100% - #{$entryDialog-header-height-sm}));
+    box-sizing: border-box;
+    @include padding($entryDialog-body-padding-sm, $entryDialog-body-padding-sm, $entryDialog-body-padding-sm, $entryDialog-body-padding-sm);
+    
+  }
+  .entryDialogForm-contianor{
+    @include size();
+    overflow-x: auto
+  }
+  .entryDialogForm-content {
+    @include size();
+    @include flex('', '', space-around);
+    box-sizing: border-box;
+    padding: $entryDialog-body-padding-sm;
+    // min-width: ;
+    min-width: $entryDialogForm-content-minWidth-sm;
+    &>div {
+      height: 100%;
+    }
+
+    .entryDialogForm-show,
+    .entryDialogForm-form {
+      box-sizing: border-box;
+      border: 1px solid;
+      border-radius: $main-border-radius-sm;
+    }
+
+    .entryDialogForm-show {
+      width: $entryDialogForm-show-width-sm;
+     
+      box-sizing: border-box;
+
+      .entryDialogForm-show-operate {
+        @include size(100%, $entryDialogForm-show-operate-height-sm);
+        line-height: $entryDialogForm-show-operate-height-sm;
+        box-sizing: border-box;
+        padding-left: calc(#{$entryDialogForm-show-imglist-padding-sm}*2)
+      }
+
+      .entryDialogForm-show-content {
+        @include size(100%, calc(100% - #{$entryDialogForm-show-operate-height-sm}));
+        @include flex('', '', space-around);
+      }
+
+      .entryDialogForm-show-imglist {
+        @include size($entryDialogForm-show-imglist-width-sm, 100%);
+        box-sizing: border-box;
+
+        .entryDialogForm-show-imglistitem {
+          height: calc((100% - #{ $entryDialogForm-show-imglist-padding-sm} * 2) / 3);
+          cursor: pointer;
+          margin-bottom: $entryDialogForm-show-imglist-padding-sm;
+
+          &:last-child {
+            margin-bottom: $entryDialogForm-show-imglist-padding-sm;
+          }
+
+          img {
+            cursor: pointer;
+            box-sizing: border-box;
+            border: 2px solid;
+            @include size()
+          }
+
+          &.active {
+            img {
+              padding: $entryDialogForm-show-imglist-padding-sm;
+            }
+
+          }
+        }
+
+        .entryDialogForm-show-imglistcontent {
+          @include size(100%, calc(100% - #{$entryDialogForm-show-imglistpagination-height-sm}));
+          padding: 0 $entryDialogForm-show-imglist-padding-sm;
+          box-sizing: border-box;
+        }
+
+        .entryDialogForm-show-imglistpagination {
+          height: $entryDialogForm-show-imglistpagination-height-sm;
+          line-height: $entryDialogForm-show-imglistpagination-height-sm;
+          text-align: center;
+          font-size: $main-size-sm;
+        }
+      }
+
+      .entryDialogForm-show-imgcontent {
+        box-sizing: border-box;
+        padding-right: $entryDialogForm-show-imglist-padding-sm;
+        padding-bottom: $entryDialogForm-show-imglist-padding-sm;
+        @include size(calc(100% - #{$entryDialogForm-show-imglist-width-sm}), 100%);
+      }
+
+      .main-editor {
+
+        .ql-toolbar {
+          border-left: none;
+          border-right: none;
+        }
+
+        .ql-container {
+         border:none
+        }
+      }
+    }
+
+    .entryDialogForm-operate {
+      width: $entryDialogForm-operate-width-sm;
+      position: relative;
+
+      .el-button {
+        border: none;
+        @include center();
+        @include size($entryDialogForm-operateButton-width-sm, $entryDialogForm-operateButton-width-sm);
+        padding: 0 !important;
+
+        i {
+          font-size: $main-iconButton-size-sm;
+          font-family: $main-fontFamily;
+          font-weight: $main-fontWeight-bold;
+        }
+      }
+    }
+
+    .entryDialogForm-form {
+
+      width:calc(#{100% - $entryDialogForm-show-width-sm} - #{$entryDialogForm-operate-width-sm});
+
+      .entryDialogForm-form-content {
+        @include size(100%, calc(100% - #{$entryDialogForm-buttonbox-height-sm}));
+      }
+
+      .main-buttonBox {
+        // padding: 0!important;
+        height: $entryDialogForm-buttonbox-height-sm;
+        line-height: $entryDialogForm-buttonbox-height-sm;
+      }
+    }
+  }
+}

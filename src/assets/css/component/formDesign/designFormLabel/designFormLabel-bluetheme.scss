@@ -1,0 +1,15 @@
+
+$designFormLabel-bgColor-bluetheme:#FAFCFF;
+.designFormLabel {
+  &.designFormEntryLabel{
+    background: $designFormLabel-bgColor-bluetheme;
+
+    .designFormLabel-note{
+  
+      span{
+        color:$main-color-bluetheme
+      }
+    }
+  }
+
+}

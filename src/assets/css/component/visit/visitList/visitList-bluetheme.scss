@@ -1,0 +1,39 @@
+
+
+$visitList-groupItem-activeBgcolor-bluetheme:rgba(0,117,246,0.05);
+.visitList-box {
+  .visitList-draggable {
+    .visitList-content {
+      border-color: $main-border-color-bluetheme!important;
+      .visitList-content-title{
+        background: $main-title-bgColor-bluetheme!important;
+      }
+      .visitList-content-info{
+        .visitList-group{
+          .visitList-groupItem{
+            .visitList-groupItem-label{
+              i{
+                color:$formIcon-color-bluetheme !important;
+              }
+              span{
+                color:$main-color-bluetheme!important;
+              }         
+            }
+            &:hover{
+              background-color: $visitList-groupItem-activeBgcolor-bluetheme!important;
+              .visitList-groupItem-label{
+                span{
+                  color:$main-active-color-bluetheme!important;
+                }
+              }  
+            }
+            &.main-disable:hover{
+              background-color: transparent!important;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

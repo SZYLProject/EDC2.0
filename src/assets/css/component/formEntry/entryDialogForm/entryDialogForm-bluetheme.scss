@@ -1,0 +1,38 @@
+.entryDialog {
+  .el-dialog__body {
+    background-color: $main-container-bgColor-bluetheme;
+    .entryDialogForm-content {
+      background-color: $main-content-bgColor-bluetheme;
+      .entryDialogForm-show,.entryDialogForm-form{
+        border-color: $main-border-color-bluetheme!important;
+      }
+      .entryDialogForm-show {
+        .entryDialogForm-show-imglist {
+         .entryDialogForm-show-imglistitem {        
+            img {
+              border-color:transparent;
+            }
+            &.active {      
+              img{
+                border-color: $main-active-color-bluetheme!important;
+              }
+            }
+          }
+          .entryDialogForm-show-imglistpagination {
+            color:$main-color-bluetheme
+          }
+        }
+      }
+      .entryDialogForm-operate {
+        .el-button {
+          background-color: $main-iconButton-bgColor-bluethem!important;
+          i {
+            color: $main-primaryIcon-color-bluetheme!important;
+          }
+        }
+  
+      }
+    }
+  }
+
+}

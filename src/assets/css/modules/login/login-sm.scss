@@ -1,0 +1,147 @@
+$login-box-width-sm:620px;
+$login-box-height-sm:340px;
+$login-box-radius-sm: 50px;
+$login-box-logo-width-sm:160px;
+$login-box-logo-height-sm:40px;
+$login-leftbox-left-sm:41px;
+$login-box-logo-top-sm:50px;
+$login-box-subtitle-size-sm:35px;
+$login-box-subtitle-top-sm:160px;
+$login-box-miantitle-size-sm:20px;
+$login-box-miantitle-top-sm:220px;
+$login-form-title-size-sm:24px;
+$login-form-title-top-sm:32px;
+$login-rightbox-left-sm:22px;
+$login-form-left-sm:80px;
+$login-form-item-marginBottom-sm:10px;
+$login-form-forgetItem-marginBottom-sm:10px;
+$login-form-item-width-sm:250px;
+$login-inputInner-radius-sm:6px;
+$login-inputInner-size-sm:12px;
+$login-inputInner-icon-size-sm:14px;
+$login-inputInner-paddingLeft-sm:30px;
+$login-inputInner-height-sm:32px;
+$login-inputInner-icon-left-sm:0;
+$login-button-size-sm:12px;
+$login-enter-button-height-sm:32px;
+$login-enter-button-radius-sm:8px;
+$login-form-code-marginBottom-sm:10px;
+$login-form-code-item-width-sm:160px;
+$login-form-code-p-marignLeft-sm:6px;
+$login-form-successcode-width-sm:20px;
+$login-form-codename-letterSpacing-sm:12px;
+$login-form-codename-size-sm:18px;
+$login-form-successcode-left-sm:-50px;
+$login-form-password-icon-right-sm:5px;
+.login {
+  .login-box {
+    @include size($login-box-width-sm,$login-box-height-sm);
+    border-radius: $login-box-radius-sm;
+    .login-box-left {
+      .login-box-logo {
+        @include absolute($login-box-logo-top-sm, "", "", $login-leftbox-left-sm);
+        @include size($login-box-logo-width-sm,$login-box-logo-height-sm);
+      }
+      .login-box-subtitle {
+        font-size: $login-box-subtitle-size-sm;
+        @include absolute($login-box-subtitle-top-sm, "", "", $login-leftbox-left-sm);
+      }
+      .login-box-miantitle {
+        font-size: $login-box-miantitle-size-sm;
+        @include absolute($login-box-miantitle-top-sm, "", "", $login-leftbox-left-sm);
+      }
+    }
+    .login-box-right {
+      .login-form-title {
+        font-size: $login-form-title-size-sm;
+   
+        @include absolute($login-form-title-top-sm, "", "", $login-rightbox-left-sm);
+      }
+      .login-form {
+        @include absolute($login-form-left-sm, "", "", $login-rightbox-left-sm);
+        .el-form-item {
+          margin-bottom: $login-form-item-marginBottom-sm;
+          @include size($login-form-item-width-sm);
+
+          .el-form-item__content{
+            line-height: $login-inputInner-height-sm;
+          }
+          .el-input__inner {
+            border-radius: $login-inputInner-radius-sm;
+            font-size: $login-inputInner-size-sm;
+            @include size('', $login-inputInner-height-sm);
+            @include padding('',$login-inputInner-paddingLeft-sm,'',$login-inputInner-paddingLeft-sm)
+          }
+          .el-input__prefix {
+            @include size($login-inputInner-paddingLeft-sm, $login-inputInner-height-sm);
+            
+            i {
+              @include size($login-inputInner-icon-size-sm,$login-inputInner-icon-size-sm);
+              font-size: $login-inputInner-icon-size-sm;
+              line-height: $login-inputInner-icon-size-sm;
+            }
+            left: $login-inputInner-icon-left-sm;
+          }
+        }
+        .login-form-forget {
+          margin-bottom: $login-form-forgetItem-marginBottom-sm;
+          &.login-form-errorforget {
+            margin-bottom: $login-form-item-marginBottom-sm;
+          }
+        }
+        .login-forget-button {
+          font-size: $login-button-size-sm;
+          height: $login-enter-button-height-sm;
+          line-height: $login-enter-button-height-sm;
+
+        }
+        .login-enter-button {     
+          @include size($login-form-item-width-sm, $login-enter-button-height-sm);  
+          border-radius: $login-enter-button-radius-sm;
+          // line-height: $login-enter-button-height-sm!important;
+          font-size: $login-button-size-sm!important;
+        }
+        .login-form-code {
+          margin-bottom: $login-form-code-marginBottom-sm;
+          .el-input {
+            width: $login-form-code-item-width-sm;
+  
+          }
+          .login-form-button {
+      
+            margin-left: $login-form-code-p-marignLeft-sm;
+    
+            width: calc(#{$login-form-item-width-sm - $login-form-code-p-marignLeft-sm - $login-form-code-item-width-sm });
+            .login-form-codename {
+              letter-spacing: $login-form-codename-letterSpacing-sm;
+              font-size: $login-form-codename-size-sm!important;
+            }
+          }
+          .login-form-successcode {
+            @include absolute(50%, "", "", $login-form-successcode-left-sm);
+            @include size($login-form-successcode-width-sm,$login-form-successcode-width-sm);
+          }
+        }
+        .login-back {
+
+          .el-button {
+
+            span {
+              font-size: $login-button-size-sm;
+              border-radius: $main-border-radius-sm;
+              // line-height: 20px;
+              // letter-spacing: 2px;
+            }
+          }
+        }
+        .login-form-password-icon{
+          @include absolute(50%, $login-form-password-icon-right-sm, "", '');
+          font-size: $login-inputInner-icon-size-sm;
+        }
+        .login-form-errorcode{
+          font-size: $login-button-size-sm!important;
+        }
+      }
+    }
+  }
+}

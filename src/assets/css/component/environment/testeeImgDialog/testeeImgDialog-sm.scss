@@ -1,0 +1,162 @@
+$testeeImgDialog-header-height-sm:38px;
+$testeeImgDialog-body-padding-sm:15px;
+$testeeImgDialogForm-contentbox-padding-sm:12px;
+$testeeImgDialogForm-buttonbox-height-sm:40px;
+$testeeImgDialogTablelist-margin-sm:8px;
+$testeeImgDialogTablelist-item-padding-sm:8px;
+$testeeImgDialogTablelist-itemInfo-height-sm:40px;
+$testeeImgDialog-content-minWidth-sm:1000px;
+.testeeImgDialog-box {
+  .el-dialog__wrapper {
+    overflow: initial
+  }
+  .editImgDialogForm{
+    .main-form{
+      height:280px;
+    }
+    .el-dialog__body{
+      padding-bottom: 0 !important;
+    }
+    .main-dialog-footer{
+      @include size(100%,$testeeImgDialogForm-buttonbox-height-sm);
+      line-height:$testeeImgDialogForm-buttonbox-height-sm!important;
+    }
+  }
+}
+
+.testeeImgDialog {
+  margin-top: calc(#{$main-naviBar-height-sm} + #{$main-container-padding-sm}) !important;
+  @include size(calc(100% - #{$main-container-padding-sm} * 2), calc(100% - #{$main-container-padding-sm} * 2 - #{$main-naviBar-height-sm}));
+
+  .el-dialog__header {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: $testeeImgDialog-header-height-sm;
+    line-height: $testeeImgDialog-header-height-sm;
+    @include flex('', '', space-between);
+
+    .main-dialog-title {
+      line-height: inherit !important;
+      height: auto !important;
+    }
+  }
+
+  .el-dialog__body {
+    @include size(100%, calc(100% - #{$testeeImgDialog-header-height-sm}));
+    box-sizing: border-box;
+    @include padding(0, $testeeImgDialog-body-padding-sm, $testeeImgDialog-body-padding-sm, $testeeImgDialog-body-padding-sm);
+
+  }
+  .testeeImgDialog-contianor{
+    @include size();
+    overflow-x: auto
+  }
+  .testeeImgDialog-content  {
+    @include size();
+    @include flex('', '', space-between);
+    box-sizing: border-box;
+    min-width: $testeeImgDialog-content-minWidth-sm;
+    &>div {
+      @include size(calc(100% / 2 - #{$testeeImgDialog-body-padding-sm} / 2), 100%);
+      box-sizing: border-box;
+      border-radius: $main-border-radius-sm;
+      border: 1px solid;
+    }
+
+    .testeeImgDialog-upload {
+      .testeeImgDialog-upload-content {
+        height:calc(100% - #{$testeeImgDialogForm-buttonbox-height-sm});
+
+        .testeeImgDialog-contentbox {
+          padding-bottom: 0;
+        }
+      }
+
+      .testeeImgDialog-upload-operate {
+        height: $testeeImgDialogForm-buttonbox-height-sm !important;
+        line-height: $testeeImgDialogForm-buttonbox-height-sm !important;
+        text-align: center
+      }
+    }
+
+    .testeeImgDialog-tablelist {
+      .testeeImgDialog-tablelist-content {
+        height:calc(100% - #{$testeeImgDialogForm-buttonbox-height-sm});
+        box-sizing: border-box;
+        padding-bottom: $testeeImgDialogTablelist-margin-sm;
+        .testeeImgDialog-contentbox {
+          padding-top: 0;
+          padding-bottom: 0;
+          @include flex('', '', space-between);
+          flex-wrap: wrap;
+          &:after {
+            content: ' ';
+            @include size(calc((100% - #{$testeeImgDialogTablelist-margin-sm}*2)/3), calc((100% - #{$testeeImgDialogTablelist-margin-sm}*2)/2));
+          }
+          .testeeImgDialog-tablelist-item {
+            @include size(calc((100% - #{$testeeImgDialogTablelist-margin-sm}*2)/3), calc((100% - #{$testeeImgDialogTablelist-margin-sm}*1)/2));
+            box-sizing: border-box;
+            border-radius: $main-border-radius-sm;
+            border: 1px solid $main-border-color-bluetheme;
+            margin-right: $testeeImgDialogTablelist-margin-sm;
+            margin-bottom: $testeeImgDialogTablelist-margin-sm;
+            cursor: pointer;
+            &.active{
+              border-color:$main-active-color-bluetheme
+            }
+            &:nth-child(3n+3) {
+              margin-right: 0;
+            }
+            &.last-item{
+              margin-bottom: 0;
+            }  
+            position: relative;  
+            padding: $testeeImgDialogTablelist-item-padding-sm;
+            .testeeImgDialog-tablelist-itemcheck{
+             position: absolute;
+             right: -1px;
+             top: -1px;
+             color:$main-succsessIcon-color-bluetheme
+            }
+            .testeeImgDialog-tablelist-img{
+              height: calc(100% - #{$testeeImgDialogTablelist-itemInfo-height-sm});
+              img{
+                cursor: pointer!important;
+                @include size();
+              }      
+            }
+            .testeeImgDialog-tablelist-info{
+              height: $testeeImgDialogTablelist-itemInfo-height-sm;
+              .testeeImgDialog-tablelist-infotext{
+                font-size: $main-size-sm;
+                text-align: center;
+                &:last-child{
+                  font-weight: $main-fontWeight-bold;
+                  text-align: right;
+                }
+                i{
+                  font-size: $main-formIcon-size-sm;
+                }         
+                line-height: calc(#{$testeeImgDialogTablelist-itemInfo-height-sm} / 2);
+              }
+            }
+          }
+        }
+      }
+
+      .testeeImgDialog-tablelist-operate {
+        height: $testeeImgDialogForm-buttonbox-height-sm !important;
+        line-height: $testeeImgDialogForm-buttonbox-height-sm !important;
+        box-sizing: border-box;
+        padding: 0 $testeeImgDialogForm-contentbox-padding-sm;
+      }
+    }
+
+    .testeeImgDialog-contentbox {
+      @include size();
+      box-sizing: border-box;
+      padding: $testeeImgDialogForm-contentbox-padding-sm;
+    }
+  }
+
+}

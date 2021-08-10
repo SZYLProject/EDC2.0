@@ -1,0 +1,56 @@
+$treeNav-sdvStatus-info-bluetheme:#e6a23c;
+.treeNav {
+  .el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+    background-color: transparent!important;
+  }
+  .el-tree-node__content:hover {
+    background-color: transparent!important;
+  }
+  .el-tree-node__children{
+    .treeNav-tree-item{
+      background-color: transparent!important;
+    }
+  }
+  .treeNav-tree-item {
+    color: $main-title-color-bluetheme;
+    background-color: $main-title-bgColor-bluetheme !important;
+    &.active {
+      .treeNav-levelOne {
+        color: $main-active-color-bluetheme;    
+      }
+    }
+
+    .treeNav-levelTwo {
+      &::before {
+        border-color:  $main-border-color-bluetheme!important;
+      }
+      .treeNav-circle {
+        background-color: $main-border-color-bluetheme;
+      }
+      &.active,&:hover{
+        color: $main-active-color-bluetheme;
+        .treeNav-circle {
+          background-color: $main-active-color-bluetheme;
+          &::after {
+            background-color: $main-content-bgColor-bluetheme;
+          }
+        }
+      }
+      &.treeNav-sdvStatus-info {
+        color: $treeNav-sdvStatus-info-bluetheme;
+        // .treeNav-circle {
+        //   background-color: $treeNav-sdvStatus-info-bluetheme;
+        // }
+        // &.active,&:hover{
+        //   color: $treeNav-sdvStatus-info-bluetheme;
+        //   .treeNav-circle {
+        //     background-color: $treeNav-sdvStatus-info-bluetheme;
+        //     &::after {
+        //       background-color: $treeNav-sdvStatus-info-bluetheme;
+        //     }
+        //   }
+        // }
+      }
+    }
+  }
+}

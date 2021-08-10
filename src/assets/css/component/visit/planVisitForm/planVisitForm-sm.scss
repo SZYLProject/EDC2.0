@@ -1,0 +1,11 @@
+.planVisitForm{
+  .planVisitForm-unitForm{
+    .el-form-item{
+      margin-bottom: 0!important;
+    }
+  }
+  .planVisitForm-unit{
+    line-height: $main-formInput-height-sm !important;
+    height: $main-formInput-height-sm !important;
+  }
+}

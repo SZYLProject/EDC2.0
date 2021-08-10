@@ -1,0 +1,12 @@
+.testeeImgDialog {
+  .el-dialog__body {
+    // background-color: $main-container-bgColor-bluetheme;
+    .testeeImgDialog-content {
+      // background-color: $main-content-bgColor-bluetheme;
+      &>div{
+        border-color: $main-border-color-bluetheme!important;
+      }
+    }
+  }
+ 
+}

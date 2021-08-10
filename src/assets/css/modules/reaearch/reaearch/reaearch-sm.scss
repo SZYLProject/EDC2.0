@@ -1,0 +1,64 @@
+$research-contentList-marginRight-sm:10px;
+$research-contentList-height-sm:130px;
+$research-contentList-marginBottom-sm:15px;
+$research-contentTitle-padding-sm:15px;
+$research-contentTitle-height-sm:40px;
+$research-contentWord-padding-sm:40px;
+$research-contentOperate-height-sm:50px;
+$research-operateButton-width-sm:30px;
+$research-contentItem-minWidth-sm:340px;
+// $
+.research {
+  .research-content {
+    &>div {
+      width: calc((100% - #{$research-contentList-marginRight-sm}) / 2);
+      min-width: $research-contentItem-minWidth-sm;
+      margin-bottom: $research-contentList-marginBottom-sm;
+      border-radius: $main-border-radius-sm;
+      &:nth-child(odd){
+        margin-right: $research-contentList-marginRight-sm;
+      }
+      .research-content-title {
+        @include padding(0, $research-contentTitle-padding-sm, 0, $research-contentTitle-padding-sm);
+        height: $research-contentTitle-height-sm;
+        line-height: $research-contentTitle-height-sm;
+      }
+      .research-remove {
+        width: $research-operateButton-width-sm;
+        &:first-child{
+          margin-left: $main-buttonSpace-marign-sm;
+        }
+      }
+      .research-content-word {
+        @include padding(0, $research-contentWord-padding-sm, 0, $research-contentWord-padding-sm);
+        line-height: calc(#{$research-contentList-height-sm - $research-contentTitle-height-sm -$research-contentOperate-height-sm }  );
+        span {
+          font-size: $main-size-sm;
+        }
+      }
+      .research-content-operate{
+        @include padding(0, $research-contentWord-padding-sm, 0, $research-contentWord-padding-sm);
+        @include size(100%,$research-contentOperate-height-sm);
+        line-height: $research-contentOperate-height-sm;
+        .research-environment{
+          .el-button{
+            i,span{
+              font-size: $main-size-sm;
+            }
+          }
+        }
+      
+        .research-operate{
+
+          .el-button{
+
+            @include size($research-operateButton-width-sm,$research-operateButton-width-sm);
+            i{
+              font-size: $main-iconButton-size-sm;
+            }
+          }
+        }
+      }
+    }
+  }
+}

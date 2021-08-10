@@ -1,0 +1,215 @@
+$main-searchFormLabel-width-sm:60px;
+$main-searchFormLabel-marginRight-sm:6px;
+$main-searchFormItem-marginRight-sm:14px;
+$main-searchFormInput-width-sm:180px;
+$main-drageForm-label-margin-sm:10px;
+$main-erroForm-padding-sm:4px;
+$main-formSplit-width-sm:28px;
+
+.main-searchForm {
+  height: $main-searchForm-height-sm;
+  line-height: $main-searchForm-height-sm;
+
+  // margin-bottom: 20px;
+  .main-searchForm-label {
+    margin-right: $main-searchFormLabel-marginRight-sm;
+    width: $main-searchFormLabel-width-sm;
+  }
+
+  .main-searchForm-item {
+    margin-right: $main-searchFormItem-marginRight-sm;
+  }
+
+  .el-input__icon {
+    font-size: $main-title-size-sm !important;
+  }
+
+  .el-input {
+    width: $main-searchFormInput-width-sm !important;
+  }
+}
+
+.main-designform,
+.main-drageForm {
+  .el-input__inner,
+  .el-form-item__label,
+  .el-textarea__inner {
+    font-size: $main-size-sm;
+  }
+
+  .el-form-item__label {
+    font-size: $main-title-size-sm;
+  }
+
+  .el-form-item__label,
+  .el-input__inner,
+  .el-input__icon,
+  .el-input__prefix,
+  .el-input,
+  .el-radio__label,.main-form-label {
+    line-height: $main-designformInput-height-sm !important;
+    height: $main-designformInput-height-sm !important;
+  }
+
+  .el-radio__label,.el-checkbox__label {
+    font-size: $main-size-sm;
+  }
+
+  .el-date-editor {
+    .el-icon-date {
+      font-size: $main-iconButton-size-sm;
+
+    }
+  }
+}
+
+.main-drageForm {
+
+  .el-form-item__label,
+  .el-input__inner,
+  .el-input__icon,
+  .el-input__prefix,
+  .el-input {
+    line-height: $main-formInput-height-sm !important;
+    height: $main-formInput-height-sm !important;
+  }
+  .el-radio__label{
+    line-height: $main-formInput-height-md !important;
+  }
+  // .el-textarea__inner {
+  //   // height: $main-formInput-height-sm !important;
+  // }
+
+  .el-form-item__label {
+    margin-bottom: $main-drageForm-label-margin-sm;
+    padding: 0 !important;
+  }
+
+  .el-form-item {
+    margin-bottom: 0 !important;
+  }
+}
+
+.main-form,
+.main-searchForm {
+  .main-searchForm-label,
+  .el-input__inner,
+  .el-form-item__label,
+  .el-textarea__inner,
+  .main-form-split,.main-form-label,.main-form-text{
+    font-size: $main-size-sm;
+  }
+  .main-searchForm-label,
+  .el-form-item__label,
+  .el-input__inner,
+  .el-input__icon,
+  .el-input__prefix,
+  .el-input,
+  .el-input__suffix,.el-form-item__content,.el-input-group__append,.main-form-label  {
+    line-height: $main-formInput-height-sm !important;
+    height: $main-formInput-height-sm !important;
+  }
+  .el-radio__label{
+    line-height: $main-formInput-height-md !important;
+  }
+  font-size: $main-title-size-sm;
+
+  .el-form-item {
+    margin-bottom: $main-form-margin-sm !important;
+  }
+
+  .el-radio__label {
+    font-size: $main-size-sm;
+  }
+  .main-form-split {
+    width: $main-formSplit-width-sm;
+  }
+
+  .main-dateRannge {
+    .el-input {
+      width:calc(50% - #{$main-formSplit-width-sm}/2)
+    }
+  }
+
+  .el-date-editor {
+    .el-icon-date {
+      font-size: $main-iconButton-size-sm;
+
+    }
+  }
+
+  .el-form-item__error {
+    padding-top: $main-erroForm-padding-sm !important;
+  }
+}
+
+.main-designform {
+  .main-designform-table {
+    margin-top: $main-form-margin-sm;
+  }
+}
+
+.main-textarea {
+  .el-form-item__content {
+    line-height: normal !important;
+    height: auto !important;
+  }
+}
+.main-form-title{
+  line-height: $main-formInputTitle-height-sm !important;
+  height: $main-formInputTitle-height-sm !important;
+  margin-bottom: $main-form-margin-sm !important;
+}
+.main-textarea,.main-fileUpload{
+  .el-form-item__content{
+    line-height: normal!important;
+    height:auto!important;
+  }
+}
+
+.main-form-title{
+  line-height: $main-formInputTitle-height-md !important;
+  height: $main-formInputTitle-height-md !important;
+  font-weight: $main-fontWeight-bold;
+  margin-bottom: $main-form-margin-md !important;
+}
+
+.main-file-input{
+  cursor: pointer!important;
+  input,.el-input__prefix,.el-input__suffix{
+    cursor: pointer!important;
+    i{
+      cursor: pointer!important;
+    }
+  }
+  .el-input__prefix{
+    i{
+      font-size:$main-formIcon-size-md!important;
+    }
+    
+  }
+}
+.main-fileUpload{
+  .el-upload-list__item{
+    &.is-ready{
+      .el-icon-close{
+        display: block!important;
+      }
+    }
+  }
+  .el-upload-list__item-name{
+    font-weight: $main-fontWeight-bold;
+    i{
+      font-weight: $main-fontWeight-bold;
+    }   
+  }
+  .el-upload-list__item-status-label{
+    .el-icon-upload-success{
+      font-weight: $main-fontWeight-bold;
+    }
+
+  }
+  .el-icon-close{
+    font-weight: $main-fontWeight-bold;
+  }
+}

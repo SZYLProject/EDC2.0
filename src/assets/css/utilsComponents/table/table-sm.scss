@@ -1,0 +1,10 @@
+// $main-tableTh-color-
+$main-tableTh-height-sm:36px;
+.main-table,.main-form-table{
+  td,
+  th , .el-table__empty-text,.cell{
+    height: $main-tableTh-height-sm;
+    line-height:  $main-tableTh-height-sm;
+    font-size: $main-size-sm;
+  }
+}

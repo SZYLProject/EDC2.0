@@ -1,0 +1,59 @@
+$setting-list-height-sm:32px;
+
+$setting-inlineFormItem-input-width-sm:30%;
+$setting-inlineFormItem-select-width-sm:10%;
+$setting-inlineFormItem-input-height-sm:32px;
+
+.setting,
+.main-popover {
+  .seeting-tip-info {
+
+    line-height: $main-card-title-height-sm;
+    font-size: $main-size-sm;
+
+  }
+
+  .setting-add-button {
+    font-size: $main-size-sm !important;
+  }
+  .setting-inlineFormItem{
+    .el-form-item{
+  
+      &:first-child{
+        width: $setting-inlineFormItem-input-width-sm;  
+      }  
+      &:nth-child(2){
+        width: $setting-inlineFormItem-select-width-sm;
+      }
+    }
+  }
+  .setting-list {
+    height: $setting-list-height-sm;
+    line-height: $setting-list-height-sm;
+  }
+
+
+
+  .el-form-item__label,
+  .el-input__inner,
+  .el-input,
+  .el-radio__label,
+  .el-form-item__content {
+    line-height: $main-card-title-height-sm;
+    font-size: $main-size-sm;
+  }
+
+  .el-input,.el-input__inner{
+    height: $setting-inlineFormItem-input-height-sm;
+    line-height: $setting-inlineFormItem-input-height-sm;
+    font-size: $main-size-sm;
+  }
+
+  .el-input__suffix-inner{
+    height: $setting-inlineFormItem-input-height-sm;
+    .el-input__icon{
+      font-size: $main-size-sm!important;
+    }
+  }
+
+}

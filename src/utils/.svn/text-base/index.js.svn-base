@@ -1,0 +1,58 @@
+/**
+ * Created by jiachenpan on 16/11/18.
+ */
+
+// 表单字段处理
+// strToOther 获取数据后转相应的格式 toStr 提交数据转字符串
+export function handleFormData(item, val, fileList) {
+  if (item.controlType === 'CB' || item.controlType === 'SEL_MUL' || item.controlType === 'ADSEL') {
+    if (val === 'toStr') {
+      (item.value = item.value.length>0&&isArray(item.value) ? item.value.join(",") : (isString(item.value) ? item.value : ""));
+    } else if (val === 'strToOther') {
+      item.value = item.value&&isString(item.value) ? item.value.split(",") : (isArray(item.value) ? item.value : []);
+    }
+  }
+  // 上传文件处理
+  if (item.controlType === "SUF") {
+    if (val === 'toStr') {
+      item.value = JSON.stringify(fileList);
+    }
+  }
+  if (item.controlType === "SLD") {
+    item.value = (val === 'toStr') ? String(item.value) : Number(item.value);
+  }
+  return item
+}
+
+//判断是否为数组
+export function isArray(obj) {
+  return Object.prototype.toString.call(obj) === '[object Array]'
+}
+//判断是否为字符串
+export function isString(obj) {
+    return Object.prototype.toString.call(obj) === '[object String]'
+}
+
+export function formatDate(date, fmt) {
+    if (/(y+)/.test(fmt)) {
+        fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length))
+    }
+    let o = {
+        'M+': date.getMonth() + 1,
+        'd+': date.getDate(),
+        'H+': date.getHours(),
+        'm+': date.getMinutes(),
+        's+': date.getSeconds()
+    }
+    for (let k in o) {
+        if (new RegExp(`(${k})`).test(fmt)) {
+            let str = o[k] + ''
+            fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? str : padLeftZero(str))
+        }
+    }
+    return fmt
+}
+
+function padLeftZero(str) {
+    return ('00' + str).substr(str.length)
+}

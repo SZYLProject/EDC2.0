@@ -1,0 +1,47 @@
+$main-dialogHeader-paddingLeft-sm:16px;
+$main-dialogHeader-paddingTop-sm:10px;
+$main-dialogHeader-icon-size-sm:18px;
+$main-headerbtn-top-sm:14px;
+$main-dialogBody-paddingLeft-sm:36px;
+$main-dialogBody-paddingTop-sm:8px;
+$main-dialogButton-width-sm:60px;
+$main-dialogButton-height-sm:28px;
+$main-dialogTitle-height-sm:18px;
+.main-dialog {
+  .el-dialog__header {
+    @include padding($main-dialogHeader-paddingTop-sm,$main-dialogHeader-paddingLeft-sm,$main-dialogHeader-paddingTop-sm,$main-dialogHeader-paddingLeft-sm);
+    position: relative;
+    .main-dialog-title {
+     line-height: $main-dialogTitle-height-sm;
+      @include size(100%,$main-dialogTitle-height-sm);
+      i {
+        font-size: $main-dialogHeader-icon-size-sm;
+      }
+      span {
+        font-size: $main-title-size-sm;      
+        margin-left: $main-buttonSpace-marign-sm;
+      }   
+    }
+    .el-dialog__headerbtn {
+      top: $main-headerbtn-top-sm!important;
+      .el-dialog__close {
+        font-size: $main-dialogHeader-icon-size-sm;
+  
+      }
+    }
+  }
+  .el-dialog__body{
+    @include padding(0,$main-dialogBody-paddingLeft-sm,$main-dialogBody-paddingTop-sm,$main-dialogBody-paddingLeft-sm);
+  }
+  .main-dialog-footer{
+    @include size(100%,$main-dialogButton-height-sm);
+    line-height:$main-dialogButton-height-sm ;
+    .el-button{
+      @include size($main-dialogButton-width-sm,$main-dialogButton-height-sm);
+      font-size: $main-size-sm;
+      padding: 0;
+      // .el-button--default
+    }
+  }
+
+}

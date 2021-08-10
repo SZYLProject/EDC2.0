@@ -1,0 +1,23 @@
+$variableValue-buttonBox-height-md:50px;
+$variableValue-tabsItem-width-md:70px;
+.variableValue{
+  padding-bottom: $variableValue-buttonBox-height-md!important;
+  box-sizing: border-box;
+  border:1px solid ;
+  border-radius: $main-border-radius-md;
+  .main-tabs{
+    @include size();
+    .main-tabs-body{
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+    .main-tabs-item{
+      width: $variableValue-tabsItem-width-md;
+    }
+  }
+  .main-buttonBox{
+    height: $variableValue-buttonBox-height-md!important;
+    line-height: $variableValue-buttonBox-height-md!important;
+  }
+
+}

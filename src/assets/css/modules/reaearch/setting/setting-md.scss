@@ -1,0 +1,53 @@
+$setting-list-height-md:32px;
+$setting-inlineFormItem-input-width-md:25%;
+$setting-inlineFormItem-select-width-md:10%;
+.setting,.main-popover {
+  .seeting-tip-info{
+    height: 100%;
+    line-height: $main-card-title-height-md;
+    font-size: $main-size-md;
+    font-family: $main-fontFamily;
+    font-weight: $main-fontWeight-bold;
+    text-align: center;
+  }
+  .setting-add-button {
+    font-size: $main-size-md !important;
+  }
+  .setting-inlineFormItem{
+    .el-form-item{
+      display: inline-block;
+      &:first-child{
+        width: $setting-inlineFormItem-input-width-md;  
+      }  
+      &:nth-child(2){
+        width: $setting-inlineFormItem-select-width-md;
+      }
+      &:nth-child(n+2){
+        .el-form-item__content{
+          margin-left: 0!important;
+        }
+      }
+    }
+  }
+  .setting-recruitmentForm-qrc{
+    display: inline-block;
+
+    .setting-qrc-button{
+      font-weight: $main-fontWeight;
+      vertical-align: middle;
+    }
+  }
+  .setting-list{
+    height: $setting-list-height-md;
+    line-height: $setting-list-height-md;
+  }
+
+  .el-form-item__label,
+  .el-input__inner,
+  .el-input,
+  .el-radio__label,
+  .el-input__suffix,.el-form-item__content{
+    line-height: $main-card-title-height-md;
+    font-size: $main-size-md;
+  }
+}
